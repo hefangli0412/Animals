@@ -1,22 +1,22 @@
 //
-//  ViewController.m
+//  TabBarController.m
 //  Animals
 //
-//  Created by Hefang Li on 3/20/15.
+//  Created by Hefang Li on 3/21/15.
 //  Copyright (c) 2015 hefang. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "TabBarController.h"
 
-@interface ViewController ()
+@interface TabBarController () 
 
 @end
 
-@implementation ViewController
+@implementation TabBarController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {

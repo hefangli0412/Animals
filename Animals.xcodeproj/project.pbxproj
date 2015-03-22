@@ -7,13 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		801A9C6E7CD753977E454E9F /* libPods-Animals.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD72641DD0C435271871243 /* libPods-Animals.a */; };
+		CD64E1401ABCCDDC00CB5973 /* Initialization.m in Sources */ = {isa = PBXBuildFile; fileRef = CD64E13F1ABCCDDC00CB5973 /* Initialization.m */; };
+		CD64E1421ABCD3F500CB5973 /* dog02.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CD64E1411ABCD3F500CB5973 /* dog02.jpeg */; };
+		CD64E1441ABCD58D00CB5973 /* icon_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = CD64E1431ABCD58D00CB5973 /* icon_circle.png */; };
+		CD64E1461ABCD69C00CB5973 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CD64E1451ABCD69C00CB5973 /* icon.png */; };
+		CD64E1481ABCD71C00CB5973 /* like.png in Resources */ = {isa = PBXBuildFile; fileRef = CD64E1471ABCD71C00CB5973 /* like.png */; };
+		CD64E14B1ABCD90E00CB5973 /* comment.png in Resources */ = {isa = PBXBuildFile; fileRef = CD64E1491ABCD90E00CB5973 /* comment.png */; };
+		CD64E1501ABCFAD900CB5973 /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = CD64E14F1ABCFAD900CB5973 /* lock.png */; };
+		CD64E1581ABDD1DF00CB5973 /* PopCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CD64E1571ABDD1DF00CB5973 /* PopCategory.m */; };
+		CD64E15A1ABDD1EF00CB5973 /* PopCategory.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD64E1591ABDD1EF00CB5973 /* PopCategory.xib */; };
+		CD64E15D1ABDDB9100CB5973 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD64E15C1ABDDB9100CB5973 /* CameraViewController.m */; };
+		CD64E1601ABDE23D00CB5973 /* SearchTVController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD64E15F1ABDE23D00CB5973 /* SearchTVController.m */; };
+		CD64E1621ABDE44F00CB5973 /* wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD64E1611ABDE44F00CB5973 /* wallpaper.jpg */; };
+		CD64E1651ABDEE0900CB5973 /* PostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD64E1641ABDEE0900CB5973 /* PostViewController.m */; };
+		CD64E1671ABDFF2C00CB5973 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD64E1661ABDFF2C00CB5973 /* MobileCoreServices.framework */; };
+		CD64E16A1ABE0D4000CB5973 /* VBResponsiveTextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD64E1691ABE0D4000CB5973 /* VBResponsiveTextFieldViewController.m */; };
+		CD64E1A31ABE1A8C00CB5973 /* PopCategoryWide.m in Sources */ = {isa = PBXBuildFile; fileRef = CD64E1A11ABE1A8C00CB5973 /* PopCategoryWide.m */; };
+		CD64E1A41ABE1A8C00CB5973 /* PopCategoryWide.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD64E1A21ABE1A8C00CB5973 /* PopCategoryWide.xib */; };
+		CD64E1A81ABE3A9200CB5973 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD64E1A71ABE3A9200CB5973 /* TabBarController.m */; };
+		CD64E1B01ABE6E7300CB5973 /* more.png in Resources */ = {isa = PBXBuildFile; fileRef = CD64E1AF1ABE6E7300CB5973 /* more.png */; };
+		CD64E1B21ABE707B00CB5973 /* dropdown.png in Resources */ = {isa = PBXBuildFile; fileRef = CD64E1B11ABE707B00CB5973 /* dropdown.png */; };
+		CD64E1B41ABE72EC00CB5973 /* dog04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD64E1B31ABE72EC00CB5973 /* dog04.jpg */; };
 		CD65DF071ABCBB2800AC3637 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD65DF061ABCBB2800AC3637 /* main.m */; };
 		CD65DF0A1ABCBB2800AC3637 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD65DF091ABCBB2800AC3637 /* AppDelegate.m */; };
-		CD65DF0D1ABCBB2800AC3637 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD65DF0C1ABCBB2800AC3637 /* ViewController.m */; };
 		CD65DF101ABCBB2800AC3637 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD65DF0E1ABCBB2800AC3637 /* Main.storyboard */; };
 		CD65DF121ABCBB2800AC3637 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD65DF111ABCBB2800AC3637 /* Images.xcassets */; };
 		CD65DF151ABCBB2800AC3637 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD65DF131ABCBB2800AC3637 /* LaunchScreen.xib */; };
 		CD65DF211ABCBB2800AC3637 /* AnimalsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD65DF201ABCBB2800AC3637 /* AnimalsTests.m */; };
+		CD65DF2C1ABCBFEA00AC3637 /* BrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD65DF2B1ABCBFEA00AC3637 /* BrowseViewController.m */; };
+		CD65DF301ABCC00C00AC3637 /* UnlockedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD65DF2E1ABCC00C00AC3637 /* UnlockedTableViewCell.m */; };
+		CD65DF311ABCC00C00AC3637 /* UnlockedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD65DF2F1ABCC00C00AC3637 /* UnlockedTableViewCell.xib */; };
+		CD65DF351ABCC02300AC3637 /* LockedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD65DF331ABCC02300AC3637 /* LockedTableViewCell.m */; };
+		CD65DF361ABCC02300AC3637 /* LockedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD65DF341ABCC02300AC3637 /* LockedTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +53,57 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DD72641DD0C435271871243 /* libPods-Animals.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Animals.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		489E744DC377675E13A015E9 /* Pods-Animals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Animals.release.xcconfig"; path = "Pods/Target Support Files/Pods-Animals/Pods-Animals.release.xcconfig"; sourceTree = "<group>"; };
+		6E465EA164F267BE82BE3A05 /* Pods-Animals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Animals.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Animals/Pods-Animals.debug.xcconfig"; sourceTree = "<group>"; };
+		CD64E13E1ABCCDDC00CB5973 /* Initialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Initialization.h; sourceTree = "<group>"; };
+		CD64E13F1ABCCDDC00CB5973 /* Initialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Initialization.m; sourceTree = "<group>"; };
+		CD64E1411ABCD3F500CB5973 /* dog02.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog02.jpeg; sourceTree = "<group>"; };
+		CD64E1431ABCD58D00CB5973 /* icon_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_circle.png; sourceTree = "<group>"; };
+		CD64E1451ABCD69C00CB5973 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		CD64E1471ABCD71C00CB5973 /* like.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = like.png; sourceTree = "<group>"; };
+		CD64E1491ABCD90E00CB5973 /* comment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comment.png; sourceTree = "<group>"; };
+		CD64E14F1ABCFAD900CB5973 /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock.png; sourceTree = "<group>"; };
+		CD64E1561ABDD1DF00CB5973 /* PopCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopCategory.h; sourceTree = "<group>"; };
+		CD64E1571ABDD1DF00CB5973 /* PopCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopCategory.m; sourceTree = "<group>"; };
+		CD64E1591ABDD1EF00CB5973 /* PopCategory.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopCategory.xib; sourceTree = "<group>"; };
+		CD64E15B1ABDDB9100CB5973 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		CD64E15C1ABDDB9100CB5973 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		CD64E15E1ABDE23D00CB5973 /* SearchTVController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTVController.h; sourceTree = "<group>"; };
+		CD64E15F1ABDE23D00CB5973 /* SearchTVController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTVController.m; sourceTree = "<group>"; };
+		CD64E1611ABDE44F00CB5973 /* wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wallpaper.jpg; sourceTree = "<group>"; };
+		CD64E1631ABDEE0900CB5973 /* PostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostViewController.h; sourceTree = "<group>"; };
+		CD64E1641ABDEE0900CB5973 /* PostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostViewController.m; sourceTree = "<group>"; };
+		CD64E1661ABDFF2C00CB5973 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		CD64E1681ABE0D4000CB5973 /* VBResponsiveTextFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBResponsiveTextFieldViewController.h; sourceTree = "<group>"; };
+		CD64E1691ABE0D4000CB5973 /* VBResponsiveTextFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBResponsiveTextFieldViewController.m; sourceTree = "<group>"; };
+		CD64E1A01ABE1A8C00CB5973 /* PopCategoryWide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopCategoryWide.h; sourceTree = "<group>"; };
+		CD64E1A11ABE1A8C00CB5973 /* PopCategoryWide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopCategoryWide.m; sourceTree = "<group>"; };
+		CD64E1A21ABE1A8C00CB5973 /* PopCategoryWide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopCategoryWide.xib; sourceTree = "<group>"; };
+		CD64E1A61ABE3A9200CB5973 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		CD64E1A71ABE3A9200CB5973 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		CD64E1AF1ABE6E7300CB5973 /* more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more.png; sourceTree = "<group>"; };
+		CD64E1B11ABE707B00CB5973 /* dropdown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropdown.png; sourceTree = "<group>"; };
+		CD64E1B31ABE72EC00CB5973 /* dog04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog04.jpg; sourceTree = "<group>"; };
 		CD65DF011ABCBB2800AC3637 /* Animals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD65DF051ABCBB2800AC3637 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD65DF061ABCBB2800AC3637 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CD65DF081ABCBB2800AC3637 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CD65DF091ABCBB2800AC3637 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CD65DF0B1ABCBB2800AC3637 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CD65DF0C1ABCBB2800AC3637 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CD65DF0F1ABCBB2800AC3637 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD65DF111ABCBB2800AC3637 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CD65DF141ABCBB2800AC3637 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CD65DF1A1ABCBB2800AC3637 /* AnimalsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimalsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD65DF1F1ABCBB2800AC3637 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD65DF201ABCBB2800AC3637 /* AnimalsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimalsTests.m; sourceTree = "<group>"; };
+		CD65DF2A1ABCBFEA00AC3637 /* BrowseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowseViewController.h; sourceTree = "<group>"; };
+		CD65DF2B1ABCBFEA00AC3637 /* BrowseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowseViewController.m; sourceTree = "<group>"; };
+		CD65DF2D1ABCC00C00AC3637 /* UnlockedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnlockedTableViewCell.h; sourceTree = "<group>"; };
+		CD65DF2E1ABCC00C00AC3637 /* UnlockedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnlockedTableViewCell.m; sourceTree = "<group>"; };
+		CD65DF2F1ABCC00C00AC3637 /* UnlockedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UnlockedTableViewCell.xib; sourceTree = "<group>"; };
+		CD65DF321ABCC02300AC3637 /* LockedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LockedTableViewCell.h; sourceTree = "<group>"; };
+		CD65DF331ABCC02300AC3637 /* LockedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LockedTableViewCell.m; sourceTree = "<group>"; };
+		CD65DF341ABCC02300AC3637 /* LockedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LockedTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +111,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD64E1671ABDFF2C00CB5973 /* MobileCoreServices.framework in Frameworks */,
+				801A9C6E7CD753977E454E9F /* libPods-Animals.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +126,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A747FAAC0FA55C35E9CA956D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD64E1661ABDFF2C00CB5973 /* MobileCoreServices.framework */,
+				0DD72641DD0C435271871243 /* libPods-Animals.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD64E13D1ABCCD4D00CB5973 /* PlaceholderFiles */ = {
+			isa = PBXGroup;
+			children = (
+				CD64E1B11ABE707B00CB5973 /* dropdown.png */,
+				CD64E1611ABDE44F00CB5973 /* wallpaper.jpg */,
+				CD64E1491ABCD90E00CB5973 /* comment.png */,
+				CD64E1AF1ABE6E7300CB5973 /* more.png */,
+				CD64E14F1ABCFAD900CB5973 /* lock.png */,
+				CD64E1471ABCD71C00CB5973 /* like.png */,
+				CD64E1B31ABE72EC00CB5973 /* dog04.jpg */,
+				CD64E1451ABCD69C00CB5973 /* icon.png */,
+				CD64E1411ABCD3F500CB5973 /* dog02.jpeg */,
+				CD64E1431ABCD58D00CB5973 /* icon_circle.png */,
+				CD64E13E1ABCCDDC00CB5973 /* Initialization.h */,
+				CD64E13F1ABCCDDC00CB5973 /* Initialization.m */,
+			);
+			name = PlaceholderFiles;
+			sourceTree = "<group>";
+		};
+		CD64E1A51ABE1A9700CB5973 /* PopCategories */ = {
+			isa = PBXGroup;
+			children = (
+				CD64E1561ABDD1DF00CB5973 /* PopCategory.h */,
+				CD64E1571ABDD1DF00CB5973 /* PopCategory.m */,
+				CD64E1591ABDD1EF00CB5973 /* PopCategory.xib */,
+				CD64E1A01ABE1A8C00CB5973 /* PopCategoryWide.h */,
+				CD64E1A11ABE1A8C00CB5973 /* PopCategoryWide.m */,
+				CD64E1A21ABE1A8C00CB5973 /* PopCategoryWide.xib */,
+			);
+			name = PopCategories;
+			sourceTree = "<group>";
+		};
 		CD65DEF81ABCBB2800AC3637 = {
 			isa = PBXGroup;
 			children = (
 				CD65DF031ABCBB2800AC3637 /* Animals */,
 				CD65DF1D1ABCBB2800AC3637 /* AnimalsTests */,
 				CD65DF021ABCBB2800AC3637 /* Products */,
+				D15DD6A1A53EEF98843C7220 /* Pods */,
+				A747FAAC0FA55C35E9CA956D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,14 +190,27 @@
 		CD65DF031ABCBB2800AC3637 /* Animals */ = {
 			isa = PBXGroup;
 			children = (
+				CD64E1A51ABE1A9700CB5973 /* PopCategories */,
+				CD64E13D1ABCCD4D00CB5973 /* PlaceholderFiles */,
+				CD65DF371ABCC02A00AC3637 /* TableCell */,
 				CD65DF081ABCBB2800AC3637 /* AppDelegate.h */,
 				CD65DF091ABCBB2800AC3637 /* AppDelegate.m */,
-				CD65DF0B1ABCBB2800AC3637 /* ViewController.h */,
-				CD65DF0C1ABCBB2800AC3637 /* ViewController.m */,
+				CD65DF2A1ABCBFEA00AC3637 /* BrowseViewController.h */,
+				CD65DF2B1ABCBFEA00AC3637 /* BrowseViewController.m */,
+				CD64E15B1ABDDB9100CB5973 /* CameraViewController.h */,
+				CD64E15C1ABDDB9100CB5973 /* CameraViewController.m */,
+				CD64E15E1ABDE23D00CB5973 /* SearchTVController.h */,
+				CD64E15F1ABDE23D00CB5973 /* SearchTVController.m */,
+				CD64E1631ABDEE0900CB5973 /* PostViewController.h */,
+				CD64E1641ABDEE0900CB5973 /* PostViewController.m */,
 				CD65DF0E1ABCBB2800AC3637 /* Main.storyboard */,
 				CD65DF111ABCBB2800AC3637 /* Images.xcassets */,
 				CD65DF131ABCBB2800AC3637 /* LaunchScreen.xib */,
 				CD65DF041ABCBB2800AC3637 /* Supporting Files */,
+				CD64E1681ABE0D4000CB5973 /* VBResponsiveTextFieldViewController.h */,
+				CD64E1691ABE0D4000CB5973 /* VBResponsiveTextFieldViewController.m */,
+				CD64E1A61ABE3A9200CB5973 /* TabBarController.h */,
+				CD64E1A71ABE3A9200CB5973 /* TabBarController.m */,
 			);
 			path = Animals;
 			sourceTree = "<group>";
@@ -119,6 +241,28 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CD65DF371ABCC02A00AC3637 /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				CD65DF2D1ABCC00C00AC3637 /* UnlockedTableViewCell.h */,
+				CD65DF2E1ABCC00C00AC3637 /* UnlockedTableViewCell.m */,
+				CD65DF2F1ABCC00C00AC3637 /* UnlockedTableViewCell.xib */,
+				CD65DF321ABCC02300AC3637 /* LockedTableViewCell.h */,
+				CD65DF331ABCC02300AC3637 /* LockedTableViewCell.m */,
+				CD65DF341ABCC02300AC3637 /* LockedTableViewCell.xib */,
+			);
+			name = TableCell;
+			sourceTree = "<group>";
+		};
+		D15DD6A1A53EEF98843C7220 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6E465EA164F267BE82BE3A05 /* Pods-Animals.debug.xcconfig */,
+				489E744DC377675E13A015E9 /* Pods-Animals.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +270,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD65DF241ABCBB2800AC3637 /* Build configuration list for PBXNativeTarget "Animals" */;
 			buildPhases = (
+				5F2E0883CB7308692A67AF4E /* Check Pods Manifest.lock */,
 				CD65DEFD1ABCBB2800AC3637 /* Sources */,
 				CD65DEFE1ABCBB2800AC3637 /* Frameworks */,
 				CD65DEFF1ABCBB2800AC3637 /* Resources */,
+				998CD0C0EBE14166C56A1E91 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,9 +345,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD64E1B41ABE72EC00CB5973 /* dog04.jpg in Resources */,
+				CD64E1B01ABE6E7300CB5973 /* more.png in Resources */,
+				CD64E1421ABCD3F500CB5973 /* dog02.jpeg in Resources */,
+				CD64E1501ABCFAD900CB5973 /* lock.png in Resources */,
+				CD64E1B21ABE707B00CB5973 /* dropdown.png in Resources */,
 				CD65DF101ABCBB2800AC3637 /* Main.storyboard in Resources */,
+				CD64E1481ABCD71C00CB5973 /* like.png in Resources */,
 				CD65DF151ABCBB2800AC3637 /* LaunchScreen.xib in Resources */,
+				CD65DF311ABCC00C00AC3637 /* UnlockedTableViewCell.xib in Resources */,
+				CD64E1461ABCD69C00CB5973 /* icon.png in Resources */,
 				CD65DF121ABCBB2800AC3637 /* Images.xcassets in Resources */,
+				CD64E15A1ABDD1EF00CB5973 /* PopCategory.xib in Resources */,
+				CD64E1A41ABE1A8C00CB5973 /* PopCategoryWide.xib in Resources */,
+				CD64E1621ABDE44F00CB5973 /* wallpaper.jpg in Resources */,
+				CD64E14B1ABCD90E00CB5973 /* comment.png in Resources */,
+				CD64E1441ABCD58D00CB5973 /* icon_circle.png in Resources */,
+				CD65DF361ABCC02300AC3637 /* LockedTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,13 +374,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5F2E0883CB7308692A67AF4E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		998CD0C0EBE14166C56A1E91 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Animals/Pods-Animals-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CD65DEFD1ABCBB2800AC3637 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD65DF0D1ABCBB2800AC3637 /* ViewController.m in Sources */,
+				CD64E1601ABDE23D00CB5973 /* SearchTVController.m in Sources */,
+				CD64E16A1ABE0D4000CB5973 /* VBResponsiveTextFieldViewController.m in Sources */,
+				CD64E1A81ABE3A9200CB5973 /* TabBarController.m in Sources */,
 				CD65DF0A1ABCBB2800AC3637 /* AppDelegate.m in Sources */,
+				CD64E15D1ABDDB9100CB5973 /* CameraViewController.m in Sources */,
+				CD64E1581ABDD1DF00CB5973 /* PopCategory.m in Sources */,
+				CD64E1651ABDEE0900CB5973 /* PostViewController.m in Sources */,
+				CD64E1A31ABE1A8C00CB5973 /* PopCategoryWide.m in Sources */,
+				CD65DF2C1ABCBFEA00AC3637 /* BrowseViewController.m in Sources */,
+				CD65DF301ABCC00C00AC3637 /* UnlockedTableViewCell.m in Sources */,
+				CD64E1401ABCCDDC00CB5973 /* Initialization.m in Sources */,
+				CD65DF351ABCC02300AC3637 /* LockedTableViewCell.m in Sources */,
 				CD65DF071ABCBB2800AC3637 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +544,7 @@
 		};
 		CD65DF251ABCBB2800AC3637 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E465EA164F267BE82BE3A05 /* Pods-Animals.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Animals/Info.plist;
@@ -351,6 +555,7 @@
 		};
 		CD65DF261ABCBB2800AC3637 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 489E744DC377675E13A015E9 /* Pods-Animals.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Animals/Info.plist;
@@ -412,6 +617,7 @@
 				CD65DF261ABCBB2800AC3637 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CD65DF271ABCBB2800AC3637 /* Build configuration list for PBXNativeTarget "AnimalsTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +626,7 @@
 				CD65DF291ABCBB2800AC3637 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

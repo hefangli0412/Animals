@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  BrowseViewController.h
 //  Animals
 //
 //  Created by Hefang Li on 3/20/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface BrowseViewController : UITableViewController
 
 @end
-
