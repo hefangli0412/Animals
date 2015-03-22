@@ -35,6 +35,11 @@
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapReceived:)];
     [tapGestureRecognizer setDelegate:self];
     [self.view addGestureRecognizer:tapGestureRecognizer];
+    
+    NSMutableDictionary *newAttributes = [[NSMutableDictionary alloc] init];
+    [newAttributes setObject:[UIFont fontWithName:@"Chalkboard SE" size:22] forKey:UITextAttributeFont];
+    [newAttributes setObject:[UIColor colorWithRed:120.0/255.0 green:120.0/255.0 blue:120.0/255.0 alpha:1.0] forKey:UITextAttributeTextColor];
+    [self.navigationController.navigationBar setTitleTextAttributes:newAttributes];
 }
 
 #pragma mark - Dropdown menu

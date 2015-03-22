@@ -9,7 +9,6 @@
 #import "CameraViewController.h"
 #import "SearchTVController.h"
 #import "PostViewController.h"
-#import "AppDelegate.h"
 #import <MobileCoreServices/UTCoreTypes.h>
 
 @interface CameraViewController () <
@@ -31,6 +30,16 @@ UIImagePickerControllerDelegate
 {
     [super viewDidLoad];
     
+    SearchTVController *first = [self.storyboard instantiateViewControllerWithIdentifier:@"SearchViewController"];
+    first.image = self.image;
+    [self presentChildController:first];
+    
+    // NavigationBar right button settings
+    self.cameraIdentifier = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(takePicture)];
+    self.postIdentifier = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(done)];
+    self.navigationItem.rightBarButtonItem = self.cameraIdentifier;
+    
+    // ImagePicker settings
     self.imagePicker = [[UIImagePickerController alloc] init];
     self.imagePicker.delegate = self;
     self.imagePicker.allowsEditing = YES;
@@ -43,14 +52,7 @@ UIImagePickerControllerDelegate
     }
     
     self.imagePicker.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:self.imagePicker.sourceType];
-    
-    SearchTVController *first = [self.storyboard instantiateViewControllerWithIdentifier:@"SearchViewController"];
-    first.image = self.image;
-    [self presentChildController:first];
-    
-    self.cameraIdentifier = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(takePicture)];
-    self.postIdentifier = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(done)];
-    self.navigationItem.rightBarButtonItem = self.cameraIdentifier;
+//    [self takePicture];
 }
 
 - (void)done {
@@ -124,7 +126,7 @@ UIImagePickerControllerDelegate
 
 - (void)takePicture
 {
-    [self.parentViewController presentViewController:self.imagePicker animated:NO completion:nil];
+    [self presentViewController:self.imagePicker animated:NO completion:nil];
 }
 
 -(void)viewWillDisappear:(BOOL)animated
@@ -134,8 +136,7 @@ UIImagePickerControllerDelegate
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    [appDelegate.window setRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"root"]];
+    [[UIApplication sharedApplication].keyWindow setRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"root"]];
     
     [self dismissViewControllerAnimated:NO completion:nil];
 }
