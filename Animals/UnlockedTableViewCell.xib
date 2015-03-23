@@ -15,7 +15,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog02.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="b38-47-Imt">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog02.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="b38-47-Imt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="280"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="b38-47-Imt" secondAttribute="height" multiplier="8:7" id="PjU-Qe-cH1"/>
@@ -141,7 +141,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.47058823529411764" green="0.47058823529411764" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.47058823529411764" green="0.47058823529411764" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </subviews>
                 <constraints>

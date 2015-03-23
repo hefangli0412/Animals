@@ -13,7 +13,8 @@
 
 @interface CameraViewController () <
 UINavigationControllerDelegate,
-UIImagePickerControllerDelegate
+UIImagePickerControllerDelegate,
+UITabBarControllerDelegate
 >
 @property (nonatomic) UIViewController *currentChildVC;
 @property (weak, nonatomic) IBOutlet UIView *containerView;
@@ -51,8 +52,8 @@ UIImagePickerControllerDelegate
         self.imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     }
     
-    self.imagePicker.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:self.imagePicker.sourceType];
-//    [self takePicture];
+//    self.imagePicker.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:self.imagePicker.sourceType];
+    self.imagePicker.mediaTypes = [[NSArray alloc] initWithObjects: (NSString *) kUTTypeImage, nil];
 }
 
 - (void)done {
@@ -129,7 +130,7 @@ UIImagePickerControllerDelegate
     [self presentViewController:self.imagePicker animated:NO completion:nil];
 }
 
--(void)viewWillDisappear:(BOOL)animated
+-(void)viewWillDisappear:(BOOL)animated // change to tab delegate
 {
     self.image = nil;
 }

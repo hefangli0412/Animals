@@ -20,7 +20,7 @@
                     <navigationItem key="navigationItem" id="rDi-XF-uLj">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="uEy-Wl-vHa">
-                            <rect key="frame" x="82" y="7" width="156" height="30"/>
+                            <rect key="frame" x="70" y="7" width="180" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Search"/>
@@ -217,11 +217,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="47" id="J1y-9I-AKG">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="47" id="J1y-9I-AKG">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J1y-9I-AKG" id="wWE-jZ-otC">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="cN3-SJ-Qez" kind="push" identifier="detailSegue" id="1ab-fc-9cN"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -230,7 +233,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Dog" id="a4O-v7-CgR">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="dropdown.png" width="5" style="plain" id="hRD-K6-pb5">
+                        <barButtonItem key="rightBarButtonItem" image="dropdown1.png" width="5" style="plain" id="hRD-K6-pb5">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QxK-Ze-3gF">
                                 <rect key="frame" x="264" y="7" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -246,10 +249,37 @@
             </objects>
             <point key="canvasLocation" x="839" y="-277"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="akw-nu-tQN">
+            <objects>
+                <viewController id="cN3-SJ-Qez" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JTj-OI-yTa"/>
+                        <viewControllerLayoutGuide type="bottom" id="zcb-PD-FEA"/>
+                    </layoutGuides>
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="EDn-UQ-ful">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iP9-Xf-amd">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="21g-kP-L9T"/>
+                    <connections>
+                        <outlet property="bgImageView" destination="iP9-Xf-amd" id="0LP-TO-XkQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZDh-OK-gXh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1246" y="-277"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="tlM-fq-Prc">
             <objects>
-                <tabBarController storyboardIdentifier="root" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zuw-0Q-V95" customClass="TabBarController" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="root" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zuw-0Q-V95" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="i1B-UE-w7c">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -308,7 +338,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="dropdown.png" width="100" height="55"/>
+        <image name="dropdown.png" width="89" height="55"/>
+        <image name="dropdown1.png" width="83" height="55"/>
         <image name="wallpaper.jpg" width="650" height="650"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

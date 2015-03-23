@@ -10,6 +10,7 @@
 #import "UnlockedTableViewCell.h"
 #import "LockedTableViewCell.h"
 #import "PopCategory.h"
+#import "DetailViewController.h"
 
 @interface BrowseViewController () <PopCategoryDelegate, UIGestureRecognizerDelegate>
 @property (strong, nonatomic) PopCategory *popView;
@@ -32,9 +33,9 @@
     [self.navigationController.view addSubview:self.popView];
     self.popView.hidden = YES;
     
-    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapReceived:)];
-    [tapGestureRecognizer setDelegate:self];
-    [self.view addGestureRecognizer:tapGestureRecognizer];
+//    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapReceived:)];
+//    [tapGestureRecognizer setDelegate:self];
+//    [self.view addGestureRecognizer:tapGestureRecognizer];
     
     NSMutableDictionary *newAttributes = [[NSMutableDictionary alloc] init];
     [newAttributes setObject:[UIFont fontWithName:@"Chalkboard SE" size:22] forKey:UITextAttributeFont];
@@ -55,15 +56,15 @@
 
 #pragma mark - Touch events
 
--(void)tapReceived:(UITapGestureRecognizer *)tapGestureRecognizer
-{
-    CGPoint touchLocation = [tapGestureRecognizer locationInView: nil];
-    
-    CGRect popRect = [self.popView.layer frame];
-    if (!CGRectContainsPoint(popRect, touchLocation)) {
-        self.popView.hidden = YES;
-    }
-}
+//-(void)tapReceived:(UITapGestureRecognizer *)tapGestureRecognizer
+//{
+//    CGPoint touchLocation = [tapGestureRecognizer locationInView: nil];
+//    
+//    CGRect popRect = [self.popView.layer frame];
+//    if (!CGRectContainsPoint(popRect, touchLocation)) {
+//        self.popView.hidden = YES;
+//    }
+//}
 
 #pragma mark - Table view data source
 
@@ -90,7 +91,7 @@
     } else {
         LockedTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:lockedTVCellIdentifier forIndexPath:indexPath];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//        cell.animalImage.image = [UIImage imageNamed:@"dog02.jpeg"];
+        cell.animalImage.image = [UIImage imageNamed:@"dog04.jpg"];
         return cell;
     }
 
@@ -111,5 +112,28 @@
 //    RSSMediaThumbnail *mediaThumbnail = [item.mediaThumbnails firstObject];
 //    return mediaThumbnail.url != nil;
 //}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([[tableView cellForRowAtIndexPath:indexPath] isKindOfClass:[UnlockedTableViewCell class]] ) {
+        [self performSegueWithIdentifier:@"detailSegue" sender:self];
+    }
+//    self.someProperty = [self.someArray objectAtIndex:indexPath.row];
+    
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"detailSegue"])
+    {
+        DetailViewController *detailViewController =
+        segue.destinationViewController;
+        BrowseViewController* tvc = (BrowseViewController*)sender;
+        UITableView *tv = tvc.tableView;
+        UnlockedTableViewCell *unlockedCell = (UnlockedTableViewCell*)[tv cellForRowAtIndexPath:tv.indexPathForSelectedRow];
+        detailViewController.bgImage = unlockedCell.animalImage.image;
+    }
+}
+
 
 @end
