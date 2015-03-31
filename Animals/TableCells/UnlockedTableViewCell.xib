@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -183,7 +184,7 @@
     </objects>
     <resources>
         <image name="comment.png" width="54" height="50"/>
-        <image name="dog02.jpeg" width="645" height="380"/>
+        <image name="dog02.jpeg" width="482" height="380"/>
         <image name="icon.png" width="409" height="409"/>
         <image name="like.png" width="54" height="47"/>
         <image name="more.png" width="563" height="385"/>

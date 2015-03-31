@@ -81,9 +81,7 @@
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     [session stopRunning];
-    //    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
-    //    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-}
+  }
 
 - (void)didReceiveMemoryWarning
 {
@@ -156,18 +154,18 @@
 }
 
 #ifdef DEBUG
-+(NSString*)orientationToText:(const UIInterfaceOrientation)ORIENTATION {
-    switch (ORIENTATION) {
-        case UIInterfaceOrientationPortrait:
-            return @"UIInterfaceOrientationPortrait";
-        case UIInterfaceOrientationPortraitUpsideDown:
-            return @"UIInterfaceOrientationPortraitUpsideDown";
-        case UIInterfaceOrientationLandscapeLeft:
-            return @"UIInterfaceOrientationLandscapeLeft";
-        case UIInterfaceOrientationLandscapeRight:
-            return @"UIInterfaceOrientationLandscapeRight";
++ (NSString*)orientationToText:(const UIInterfaceOrientation)ORIENTATION {
+    if (ORIENTATION == UIInterfaceOrientationPortrait) {
+        return @"UIInterfaceOrientationPortrait";
+    } else if (ORIENTATION == UIInterfaceOrientationPortraitUpsideDown) {
+        return @"UIInterfaceOrientationPortraitUpsideDown";
+    } else if (ORIENTATION == UIInterfaceOrientationLandscapeLeft) {
+        return @"UIInterfaceOrientationLandscapeLeft";
+    } else if (ORIENTATION == UIInterfaceOrientationLandscapeRight) {
+        return @"UIInterfaceOrientationLandscapeRight";
+    } else {
+        return @"Unknown orientation!";
     }
-    return @"Unknown orientation!";
 }
 #endif
 
@@ -210,16 +208,16 @@
     
     for (AVCaptureDevice *device in devices) {
         
-        NSLog(@"Device name: %@", [device localizedName]);
+//        NSLog(@"Device name: %@", [device localizedName]);
         
         if ([device hasMediaType:AVMediaTypeVideo]) {
             
             if ([device position] == AVCaptureDevicePositionBack) {
-                NSLog(@"Device position : back");
+//                NSLog(@"Device position : back");
                 backCamera = device;
             }
             else {
-                NSLog(@"Device position : front");
+//                NSLog(@"Device position : front");
                 frontCamera = device;
             }
         }
@@ -292,7 +290,7 @@
     }
 }
 
-- (void) capImage { //method to capture image from AVCaptureSession video feed
+- (void)capImage { //method to capture image from AVCaptureSession video feed
     AVCaptureConnection *videoConnection = nil;
     for (AVCaptureConnection *connection in stillImageOutput.connections) {
         
@@ -309,7 +307,7 @@
         }
     }
     
-    NSLog(@"about to request a capture from: %@", stillImageOutput);
+//    NSLog(@"about to request a capture from: %@", stillImageOutput);
     [stillImageOutput captureStillImageAsynchronouslyFromConnection:videoConnection completionHandler: ^(CMSampleBufferRef imageSampleBuffer, NSError *error) {
         
         if (imageSampleBuffer != NULL) {
@@ -335,7 +333,7 @@
     return newImage;
 }
 
-- (void) processImage:(UIImage *)image { //process captured image, crop, resize and rotate
+- (void)processImage:(UIImage *)image { //process captured image, crop, resize and rotate
     haveImage = YES;
     photoFromCam = YES;
     
@@ -354,30 +352,30 @@
     //    assetOrientation = ALAssetOrientationUp;
     
     // adjust image orientation
-    NSLog(@"orientation: %d",orientationLast);
+//    NSLog(@"orientation: %d",orientationLast);
     orientationAfterProcess = orientationLast;
     switch (orientationLast) {
         case UIInterfaceOrientationPortrait:
-            NSLog(@"UIInterfaceOrientationPortrait");
+//            NSLog(@"UIInterfaceOrientationPortrait");
             croppedImage = [UIImage imageWithCGImage:imageRef];
             break;
             
         case UIInterfaceOrientationPortraitUpsideDown:
-            NSLog(@"UIInterfaceOrientationPortraitUpsideDown");
+//            NSLog(@"UIInterfaceOrientationPortraitUpsideDown");
             croppedImage = [[[UIImage alloc] initWithCGImage: imageRef
                                                        scale: 1.0
                                                  orientation: UIImageOrientationDown] autorelease];
             break;
             
         case UIInterfaceOrientationLandscapeLeft:
-            NSLog(@"UIInterfaceOrientationLandscapeLeft");
+//            NSLog(@"UIInterfaceOrientationLandscapeLeft");
             croppedImage = [[[UIImage alloc] initWithCGImage: imageRef
                                                        scale: 1.0
                                                  orientation: UIImageOrientationRight] autorelease];
             break;
             
         case UIInterfaceOrientationLandscapeRight:
-            NSLog(@"UIInterfaceOrientationLandscapeRight");
+//            NSLog(@"UIInterfaceOrientationLandscapeRight");
             croppedImage = [[[UIImage alloc] initWithCGImage: imageRef
                                                        scale: 1.0
                                                  orientation: UIImageOrientationLeft] autorelease];
@@ -465,22 +463,13 @@
     //    imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     //    imagePickerController.delegate = self;
     //    imagePickerController.allowsEditing = YES;
-    [self presentViewController:imgPicker animated:YES completion:NULL];
+    [self presentViewController:imgPicker animated:NO completion:NULL];
 }
 
 - (IBAction)skipped:(id)sender{
     
     if ([delegate respondsToSelector:@selector(yCameraControllerdidSkipped)]) {
         [delegate yCameraControllerdidSkipped];
-    }
-    
-    // Dismiss self view controller
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
--(IBAction) cancel:(id)sender {
-    if ([delegate respondsToSelector:@selector(yCameraControllerDidCancel)]) {
-        [delegate yCameraControllerDidCancel];
     }
     
     // Dismiss self view controller
@@ -534,12 +523,12 @@
             NSArray *devices = [AVCaptureDevice devices];
             for (AVCaptureDevice *device in devices) {
                 
-                NSLog(@"Device name: %@", [device localizedName]);
+//                NSLog(@"Device name: %@", [device localizedName]);
                 
                 if ([device hasMediaType:AVMediaTypeVideo]) {
                     
                     if ([device position] == AVCaptureDevicePositionBack) {
-                        NSLog(@"Device position : back");
+//                        NSLog(@"Device position : back");
                         if ([device hasFlash]){
                             
                             [device lockForConfiguration:nil];
@@ -559,12 +548,12 @@
             NSArray *devices = [AVCaptureDevice devices];
             for (AVCaptureDevice *device in devices) {
                 
-                NSLog(@"Device name: %@", [device localizedName]);
+//                NSLog(@"Device name: %@", [device localizedName]);
                 
                 if ([device hasMediaType:AVMediaTypeVideo]) {
                     
                     if ([device position] == AVCaptureDevicePositionBack) {
-                        NSLog(@"Device position : back");
+//                        NSLog(@"Device position : back");
                         if ([device hasFlash]){
                             
                             [device lockForConfiguration:nil];
@@ -583,17 +572,29 @@
 
 #pragma mark - UI Control Helpers
 - (void)hideControllers{
-    [UIView animateWithDuration:0.2 animations:^{
-        self.photoBar.center = CGPointMake(self.photoBar.center.x, self.photoBar.center.y+116.0);
-        self.topBar.center = CGPointMake(self.topBar.center.x, self.topBar.center.y-44.0);
-    } completion:nil];
+//    [UIView animateWithDuration:0.2 animations:^{
+        for (UIView *view in self.photoBar.subviews) {
+            view.alpha = 0.0;
+        }
+        self.photoBar.alpha = 0.0;
+        for (UIView *view in self.topBar.subviews) {
+            view.alpha = 0.0;
+        }
+        self.topBar.alpha = 0.0;
+//    } completion:nil];
 }
 
 - (void)showControllers{
-    [UIView animateWithDuration:0.2 animations:^{
-        self.photoBar.center = CGPointMake(self.photoBar.center.x, self.photoBar.center.y-116.0);
-        self.topBar.center = CGPointMake(self.topBar.center.x, self.topBar.center.y+44.0);
-    } completion:nil];
+//    [UIView animateWithDuration:0.2 animations:^{
+        for (UIView *view in self.photoBar.subviews) {
+            view.alpha = 1.0;
+        }
+        self.photoBar.alpha = 1.0;
+        for (UIView *view in self.topBar.subviews) {
+            view.alpha = 1.0;
+        }
+        self.topBar.alpha = 1.0;
+//    } completion:nil];
 }
 
 @end

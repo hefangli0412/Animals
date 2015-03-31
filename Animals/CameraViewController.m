@@ -10,16 +10,15 @@
 #import "SearchTVController.h"
 #import "PostViewController.h"
 #import <MobileCoreServices/UTCoreTypes.h>
+#import "YCameraViewController.h"
 
 @interface CameraViewController () <
-UINavigationControllerDelegate,
-UIImagePickerControllerDelegate,
-UITabBarControllerDelegate
+UITabBarControllerDelegate,
+YCameraViewControllerDelegate
 >
 @property (nonatomic) UIViewController *currentChildVC;
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segControl;
-@property (strong, nonatomic) UIImagePickerController *imagePicker;
 @property (strong, nonatomic) UIImage *image;
 @property (strong, nonatomic) UIBarButtonItem *cameraIdentifier;
 @property (strong, nonatomic) UIBarButtonItem *postIdentifier;
@@ -27,8 +26,7 @@ UITabBarControllerDelegate
 
 @implementation CameraViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     
     SearchTVController *first = [self.storyboard instantiateViewControllerWithIdentifier:@"SearchViewController"];
@@ -36,32 +34,19 @@ UITabBarControllerDelegate
     [self presentChildController:first];
     
     // NavigationBar right button settings
-    self.cameraIdentifier = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(takePicture)];
+    self.cameraIdentifier = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(takePhoto)];
     self.postIdentifier = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(done)];
     self.navigationItem.rightBarButtonItem = self.cameraIdentifier;
     
-    // ImagePicker settings
-    self.imagePicker = [[UIImagePickerController alloc] init];
-    self.imagePicker.delegate = self;
-    self.imagePicker.allowsEditing = YES;
-    
-    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-        self.imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    }
-    else {
-        self.imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    }
-    
-//    self.imagePicker.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:self.imagePicker.sourceType];
-    self.imagePicker.mediaTypes = [[NSArray alloc] initWithObjects: (NSString *) kUTTypeImage, nil];
+    UITabBarController *tbc = (UITabBarController*) self.parentViewController.parentViewController;
+    tbc.delegate = self;
 }
 
 - (void)done {
     NSLog(@"Done");
 }
 
-- (void)presentChildController:(UIViewController*)childVC
-{
+- (void)presentChildController:(UIViewController*)childVC {
     if (self.currentChildVC) {
         [self removeCurrentChildViewController];
     }
@@ -77,15 +62,13 @@ UITabBarControllerDelegate
     
 }
 
-- (void)removeCurrentChildViewController
-{
+- (void)removeCurrentChildViewController {
     [self.currentChildVC willMoveToParentViewController:nil];
     [self.currentChildVC.view removeFromSuperview];
     [self.currentChildVC removeFromParentViewController];
 }
 
-- (CGRect)frameForContainerController
-{
+- (CGRect)frameForContainerController {
     CGRect containerFrame = self.containerView.bounds;
     return containerFrame;
 }
@@ -114,52 +97,45 @@ UITabBarControllerDelegate
      }
 }
 
-#pragma mark - Image Picker Controller delegate
+#pragma mark - YCameraViewController Delegate
 
-- (void)viewWillAppear:(BOOL)animated
-{
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
     if (self.image == nil) {
-        [self takePicture];
+        [self takePhoto];
     }
 }
 
-- (void)takePicture
-{
-    [self presentViewController:self.imagePicker animated:NO completion:nil];
-}
+//-(void)viewWillDisappear:(BOOL)animated { // change to tab delegate whenever change
+//    self.image = nil;
+//}
 
--(void)viewWillDisappear:(BOOL)animated // change to tab delegate
-{
+- (void)setImageNil {
     self.image = nil;
+    NSLog(@"setImageNil");
 }
 
-- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
-{
+- (void)takePhoto {
+    YCameraViewController *camController = [[YCameraViewController alloc] initWithNibName:@"YCameraViewController" bundle:nil];
+    camController.delegate=self;
+    [self presentViewController:camController animated:YES completion:^{
+        // completion code
+    }];
+}
+
+
+- (void)didFinishPickingImage:(UIImage *)image {
+    self.image = image;
+}
+
+- (void)yCameraControllerdidSkipped {
+    self.image = nil;
+    
     [[UIApplication sharedApplication].keyWindow setRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"root"]];
-    
-    [self dismissViewControllerAnimated:NO completion:nil];
 }
 
-- (void)imagePickerController:(UIImagePickerController *)picker
-didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    NSString *mediaType = [info objectForKey:UIImagePickerControllerMediaType];
-    
-    if ([mediaType isEqualToString:(NSString *)kUTTypeImage]) {
-        // A photo was taken/selected!
-        self.image = [info objectForKey:UIImagePickerControllerOriginalImage];
-        if (self.imagePicker.sourceType == UIImagePickerControllerSourceTypeCamera) {
-            // Save the image!
-            UIImageWriteToSavedPhotosAlbum(self.image, nil, nil, nil);
-        }
-    }
-    else {
-        NSLog(@"Wrong media type");
-    }
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
+- (void)yCameraControllerDidCancel {
 }
-
 
 @end

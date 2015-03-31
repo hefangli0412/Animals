@@ -49,7 +49,6 @@
 
 #pragma mark -
 @property (nonatomic, strong) IBOutlet UIButton *photoCaptureButton;
-@property (nonatomic, strong) IBOutlet UIButton *cancelButton;
 @property (nonatomic, strong) IBOutlet UIButton *cameraToggleButton;
 @property (nonatomic, strong) IBOutlet UIButton *libraryToggleButton;
 @property (nonatomic, strong) IBOutlet UIButton *flashToggleButton;
@@ -63,6 +62,5 @@
 
 @protocol YCameraViewControllerDelegate <NSObject>
 - (void)didFinishPickingImage:(UIImage *)image;
-- (void)yCameraControllerDidCancel;
 - (void)yCameraControllerdidSkipped;
 @end
