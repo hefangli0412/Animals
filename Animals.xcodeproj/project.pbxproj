@@ -32,6 +32,8 @@
 		CD341F171ABFC27900665172 /* YCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD341F011ABFC27900665172 /* YCameraViewController.m */; };
 		CD341F181ABFC27900665172 /* YCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD341F021ABFC27900665172 /* YCameraViewController.xib */; };
 		CD46E6C41ACF105F002065B2 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD46E6C31ACF105F002065B2 /* FacebookSDK.framework */; };
+		CD46E6C71ACF11F4002065B2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD46E6C61ACF11F4002065B2 /* LoginViewController.m */; };
+		CD46E6CA1ACF165F002065B2 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD46E6C91ACF165F002065B2 /* UserViewController.m */; };
 		CD5324191AC21514003F133A /* dog02.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CD53240F1AC21514003F133A /* dog02.jpeg */; };
 		CD53241A1AC21514003F133A /* dog04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD5324101AC21514003F133A /* dog04.jpg */; };
 		CD53241B1AC21514003F133A /* dropdown.png in Resources */ = {isa = PBXBuildFile; fileRef = CD5324111AC21514003F133A /* dropdown.png */; };
@@ -109,6 +111,10 @@
 		CD341F011ABFC27900665172 /* YCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCameraViewController.m; sourceTree = "<group>"; };
 		CD341F021ABFC27900665172 /* YCameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCameraViewController.xib; sourceTree = "<group>"; };
 		CD46E6C31ACF105F002065B2 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		CD46E6C51ACF11F4002065B2 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		CD46E6C61ACF11F4002065B2 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		CD46E6C81ACF165F002065B2 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		CD46E6C91ACF165F002065B2 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		CD53240F1AC21514003F133A /* dog02.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = dog02.jpeg; path = Images/dog02.jpeg; sourceTree = "<group>"; };
 		CD5324101AC21514003F133A /* dog04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = dog04.jpg; path = Images/dog04.jpg; sourceTree = "<group>"; };
 		CD5324111AC21514003F133A /* dropdown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dropdown.png; path = Images/dropdown.png; sourceTree = "<group>"; };
@@ -305,6 +311,8 @@
 			isa = PBXGroup;
 			children = (
 				CD65DF041ABCBB2800AC3637 /* Application Files */,
+				CD46E6C51ACF11F4002065B2 /* LoginViewController.h */,
+				CD46E6C61ACF11F4002065B2 /* LoginViewController.m */,
 				CD65DF2A1ABCBFEA00AC3637 /* BrowseViewController.h */,
 				CD65DF2B1ABCBFEA00AC3637 /* BrowseViewController.m */,
 				CD64E1B71ABF0F0900CB5973 /* DetailViewController.h */,
@@ -315,6 +323,8 @@
 				CD64E15F1ABDE23D00CB5973 /* SearchTVController.m */,
 				CD64E1631ABDEE0900CB5973 /* PostViewController.h */,
 				CD64E1641ABDEE0900CB5973 /* PostViewController.m */,
+				CD46E6C81ACF165F002065B2 /* UserViewController.h */,
+				CD46E6C91ACF165F002065B2 /* UserViewController.m */,
 				CD2FA9C81ABFD53C008E575F /* TabBarController.h */,
 				CD2FA9C91ABFD53C008E575F /* TabBarController.m */,
 				CD65DF0E1ABCBB2800AC3637 /* Main.storyboard */,
@@ -559,8 +569,10 @@
 				CD341F171ABFC27900665172 /* YCameraViewController.m in Sources */,
 				CD64E15D1ABDDB9100CB5973 /* CameraViewController.m in Sources */,
 				CD5324351AC21662003F133A /* AppDelegate.m in Sources */,
+				CD46E6CA1ACF165F002065B2 /* UserViewController.m in Sources */,
 				CD64E1651ABDEE0900CB5973 /* PostViewController.m in Sources */,
 				CD65DF2C1ABCBFEA00AC3637 /* BrowseViewController.m in Sources */,
+				CD46E6C71ACF11F4002065B2 /* LoginViewController.m in Sources */,
 				CD53243E1AC216C3003F133A /* LockedTableViewCell.m in Sources */,
 				CD5324261AC21585003F133A /* Initialization.m in Sources */,
 				CD5324371AC21662003F133A /* main.m in Sources */,

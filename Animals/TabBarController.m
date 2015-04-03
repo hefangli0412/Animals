@@ -16,7 +16,6 @@
 
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
     if (item != tabBar.items[1]) {
-        NSLog(@"Called");
         CameraViewController *cvc = (CameraViewController*) self.delegate;
         [cvc setImageNil];
     }
