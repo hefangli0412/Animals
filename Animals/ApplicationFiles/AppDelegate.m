@@ -7,18 +7,26 @@
 //
 
 #import "AppDelegate.h"
+#import <FacebookSDK/FacebookSDK.h>
 
-@interface AppDelegate ()
-
-@end
 
 @implementation AppDelegate
 
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
     // Override point for customization after application launch.
-    [self.window setTintColor:[UIColor colorWithRed:255.0f/255 green:102.0f/255 blue:102.0f/255 alpha:1.0]];
+    
+    [FBLoginView class];
+    [FBProfilePictureView class];
+    
     return YES;
+}
+
+
+-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+    
+    return [FBAppCall handleOpenURL:url
+                  sourceApplication:sourceApplication];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

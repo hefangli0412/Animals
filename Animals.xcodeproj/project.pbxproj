@@ -31,6 +31,7 @@
 		CD341F161ABFC27900665172 /* take-snap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD341EFF1ABFC27900665172 /* take-snap@2x.png */; };
 		CD341F171ABFC27900665172 /* YCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD341F011ABFC27900665172 /* YCameraViewController.m */; };
 		CD341F181ABFC27900665172 /* YCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD341F021ABFC27900665172 /* YCameraViewController.xib */; };
+		CD46E6C41ACF105F002065B2 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD46E6C31ACF105F002065B2 /* FacebookSDK.framework */; };
 		CD5324191AC21514003F133A /* dog02.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CD53240F1AC21514003F133A /* dog02.jpeg */; };
 		CD53241A1AC21514003F133A /* dog04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD5324101AC21514003F133A /* dog04.jpg */; };
 		CD53241B1AC21514003F133A /* dropdown.png in Resources */ = {isa = PBXBuildFile; fileRef = CD5324111AC21514003F133A /* dropdown.png */; };
@@ -107,6 +108,7 @@
 		CD341F001ABFC27900665172 /* YCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCameraViewController.h; sourceTree = "<group>"; };
 		CD341F011ABFC27900665172 /* YCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCameraViewController.m; sourceTree = "<group>"; };
 		CD341F021ABFC27900665172 /* YCameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCameraViewController.xib; sourceTree = "<group>"; };
+		CD46E6C31ACF105F002065B2 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		CD53240F1AC21514003F133A /* dog02.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = dog02.jpeg; path = Images/dog02.jpeg; sourceTree = "<group>"; };
 		CD5324101AC21514003F133A /* dog04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = dog04.jpg; path = Images/dog04.jpg; sourceTree = "<group>"; };
 		CD5324111AC21514003F133A /* dropdown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dropdown.png; path = Images/dropdown.png; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD5324481AC26E39003F133A /* CoreData.framework in Frameworks */,
+				CD46E6C41ACF105F002065B2 /* FacebookSDK.framework in Frameworks */,
 				CD64E1671ABDFF2C00CB5973 /* MobileCoreServices.framework in Frameworks */,
 				801A9C6E7CD753977E454E9F /* libPods-Animals.a in Frameworks */,
 			);
@@ -183,6 +186,7 @@
 		A747FAAC0FA55C35E9CA956D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CD46E6C31ACF105F002065B2 /* FacebookSDK.framework */,
 				CD5324471AC26E39003F133A /* CoreData.framework */,
 				CD64E1661ABDFF2C00CB5973 /* MobileCoreServices.framework */,
 				0DD72641DD0C435271871243 /* libPods-Animals.a */,
@@ -300,8 +304,7 @@
 		CD65DF031ABCBB2800AC3637 /* Animals */ = {
 			isa = PBXGroup;
 			children = (
-				CD64E1A51ABE1A9700CB5973 /* PopCategories */,
-				CD65DF371ABCC02A00AC3637 /* TableCells */,
+				CD65DF041ABCBB2800AC3637 /* Application Files */,
 				CD65DF2A1ABCBFEA00AC3637 /* BrowseViewController.h */,
 				CD65DF2B1ABCBFEA00AC3637 /* BrowseViewController.m */,
 				CD64E1B71ABF0F0900CB5973 /* DetailViewController.h */,
@@ -316,11 +319,12 @@
 				CD2FA9C91ABFD53C008E575F /* TabBarController.m */,
 				CD65DF0E1ABCBB2800AC3637 /* Main.storyboard */,
 				CD65DF111ABCBB2800AC3637 /* Images.xcassets */,
+				CD64E1A51ABE1A9700CB5973 /* PopCategories */,
+				CD65DF371ABCC02A00AC3637 /* TableCells */,
 				CD64E13D1ABCCD4D00CB5973 /* Images */,
 				CD5324231AC2154D003F133A /* Cache */,
-				CD341EEA1ABFC27900665172 /* YCameraViewController */,
 				CD2FA9C71ABFCF23008E575F /* VBResponsiveTextFieldViewController */,
-				CD65DF041ABCBB2800AC3637 /* Application Files */,
+				CD341EEA1ABFC27900665172 /* YCameraViewController */,
 			);
 			path = Animals;
 			sourceTree = "<group>";
@@ -427,6 +431,7 @@
 				TargetAttributes = {
 					CD65DF001ABCBB2800AC3637 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = AV8W86EGKD;
 					};
 					CD65DF191ABCBB2800AC3637 = {
 						CreatedOnToolsVersion = 6.2;
@@ -685,10 +690,18 @@
 			baseConfigurationReference = 6E465EA164F267BE82BE3A05 /* Pods-Animals.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Animals/FacebookSDK",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Animals/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -697,10 +710,18 @@
 			baseConfigurationReference = 489E744DC377675E13A015E9 /* Pods-Animals.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Animals/FacebookSDK",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Animals/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

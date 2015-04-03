@@ -12,8 +12,12 @@
 #import "PopCategory.h"
 #import "DetailViewController.h"
 
+static NSString * const unlockedTVCellIdentifier = @"UnlockedTVCell";
+static NSString * const lockedTVCellIdentifier = @"LockedTVCell";
+
 @interface BrowseViewController () <PopCategoryDelegate, UIGestureRecognizerDelegate>
 @property (strong, nonatomic) PopCategory *popView;
+@property (nonatomic, strong) UnlockedTableViewCell *unlockedPrototypeCell;
 @end
 
 @implementation BrowseViewController
@@ -80,8 +84,6 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *unlockedTVCellIdentifier = @"UnlockedTVCell";
-    NSString *lockedTVCellIdentifier = @"LockedTVCell";
     
     if (indexPath.row == 0) {
         UnlockedTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:unlockedTVCellIdentifier forIndexPath:indexPath];
@@ -100,11 +102,29 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 
     if (indexPath.row == 0) {
-        return 463;
+//        return 463;
+        return 400;
     } else {
-        return 342;
+        return 400;
     }
     
+}
+
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+////    [self configureCell:self.prototypeCell forRowAtIndexPath:indexPath];
+//    [self.unlockedPrototypeCell layoutIfNeeded];
+//    
+//    CGSize size = [self.unlockedPrototypeCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+//    return size.height+1;
+//}
+
+- (UnlockedTableViewCell *)unlockedPrototypeCell
+{
+    if (!_unlockedPrototypeCell)
+    {
+        _unlockedPrototypeCell = [self.tableView dequeueReusableCellWithIdentifier:unlockedTVCellIdentifier];
+    }
+    return _unlockedPrototypeCell;
 }
 
 //- (BOOL)isLockedAtIndexPath:(NSIndexPath *)indexPath {
