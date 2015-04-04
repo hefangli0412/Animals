@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
@@ -10,7 +11,7 @@
             <rect key="frame" x="0.0" y="0.0" width="158" height="118"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBS-aK-msU">
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBS-aK-msU">
                     <rect key="frame" x="0.0" y="0.0" width="158" height="30"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="Dog">
@@ -21,7 +22,7 @@
                         <action selector="buttonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="Rhe-aV-Qyr"/>
                     </connections>
                 </button>
-                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KsG-B6-f3b">
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KsG-B6-f3b">
                     <rect key="frame" x="0.0" y="28" width="158" height="30"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="Cat">
@@ -32,7 +33,7 @@
                         <action selector="buttonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="ozN-Cj-Lei"/>
                     </connections>
                 </button>
-                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ek6-OX-lRd">
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ek6-OX-lRd">
                     <rect key="frame" x="0.0" y="58" width="158" height="30"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="Cow">
@@ -43,7 +44,7 @@
                         <action selector="buttonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="5pu-uz-NqZ"/>
                     </connections>
                 </button>
-                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ms8-UX-SPE">
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ms8-UX-SPE">
                     <rect key="frame" x="0.0" y="88" width="158" height="30"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="Others">
@@ -56,6 +57,23 @@
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="KsG-B6-f3b" secondAttribute="trailing" id="1Hf-OR-ZQ7"/>
+                <constraint firstItem="Ms8-UX-SPE" firstAttribute="top" secondItem="ek6-OX-lRd" secondAttribute="bottom" id="2ot-QZ-fea"/>
+                <constraint firstItem="ek6-OX-lRd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="9gj-E0-D36"/>
+                <constraint firstItem="ek6-OX-lRd" firstAttribute="top" secondItem="VBS-aK-msU" secondAttribute="bottom" constant="28" id="EQp-sZ-pFu"/>
+                <constraint firstAttribute="trailing" secondItem="Ms8-UX-SPE" secondAttribute="trailing" id="Hl0-1u-1Ry"/>
+                <constraint firstItem="VBS-aK-msU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="KeG-y6-asZ"/>
+                <constraint firstItem="Ms8-UX-SPE" firstAttribute="top" secondItem="ek6-OX-lRd" secondAttribute="bottom" id="NT2-De-KYC"/>
+                <constraint firstItem="VBS-aK-msU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Tfq-aX-bXr"/>
+                <constraint firstAttribute="trailing" secondItem="VBS-aK-msU" secondAttribute="trailing" id="agK-Ar-zqQ"/>
+                <constraint firstItem="KsG-B6-f3b" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bk3-dG-hdN"/>
+                <constraint firstAttribute="bottom" secondItem="Ms8-UX-SPE" secondAttribute="bottom" id="hef-MM-y4H"/>
+                <constraint firstItem="Ms8-UX-SPE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="nnO-2F-IsR"/>
+                <constraint firstAttribute="trailing" secondItem="ek6-OX-lRd" secondAttribute="trailing" id="oRd-Rc-CZW"/>
+                <constraint firstItem="ek6-OX-lRd" firstAttribute="top" secondItem="KsG-B6-f3b" secondAttribute="bottom" id="q3d-2G-Dzk"/>
+                <constraint firstItem="KsG-B6-f3b" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="28" id="sfL-BZ-rLz"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="273" y="399"/>

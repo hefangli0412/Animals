@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1925C153DC9272E3B677814A /* Pods-Animals-SAMCache-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B2F6292E4ACF8761D2E87F7 /* Pods-Animals-SAMCache-dummy.m */; };
+		48A7162EE5B296CE78A2798F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 424EEA4096CD67BABAB9BD14 /* Foundation.framework */; };
+		7000DD51CC4AA5820189B8AA /* FDTakeController.m in Sources */ = {isa = PBXBuildFile; fileRef = C679881C571FD4CE22E48D72 /* FDTakeController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7BAC9E555F7FDCDCCF77D938 /* SAMCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BEE3D2E45CA5230AC400D05 /* SAMCache.h */; };
+		865D6D5558C76F7E06C8F69B /* SAMCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D545B73CBA03B7C397EDFC01 /* SAMCache.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E2B0FE383F9D248F1F3CED61 /* Pods-Animals-FDTake-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2C8BC84C9B4E1F26649002 /* Pods-Animals-FDTake-dummy.m */; };
+		E3EB85930E9F4D14BD598A1E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 424EEA4096CD67BABAB9BD14 /* Foundation.framework */; };
+		F58D706CB15EDA776377AC7A /* FDTakeController.h in Headers */ = {isa = PBXBuildFile; fileRef = BBD027FD2B1C830885FB6B32 /* FDTakeController.h */; };
+		F861F16898E6FF31CD19DBA2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 424EEA4096CD67BABAB9BD14 /* Foundation.framework */; };
+		F9781FC63313842946173C33 /* Pods-Animals-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6986C41752E1B75B2F96AE4C /* Pods-Animals-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		99D3C28C6AECD47B658D8F40 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05C310DEF92F8879436DBD15 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 324D14473F45A31B02B3B554;
+			remoteInfo = "Pods-Animals-SAMCache";
+		};
+		CF515DDF459BF2E640629504 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05C310DEF92F8879436DBD15 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE00BFA0C67C2ED4925933F4;
+			remoteInfo = "Pods-Animals-FDTake";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		000FC76467EB813859B231EC /* Pods-Animals-SAMCache-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Animals-SAMCache-Private.xcconfig"; sourceTree = "<group>"; };
+		041E14B35ED2D5AFCBDA89B5 /* Pods-Animals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Animals.debug.xcconfig"; sourceTree = "<group>"; };
+		05A5662C6B39D83B60477726 /* Pods-Animals-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Animals-acknowledgements.plist"; sourceTree = "<group>"; };
+		18CECD40327B7A6B798C0067 /* he.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = he.lproj; path = FDTakeExample/he.lproj; sourceTree = "<group>"; };
+		18F7285EF5F959688883A9D9 /* Pods-Animals-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Animals-environment.h"; sourceTree = "<group>"; };
+		1B2F6292E4ACF8761D2E87F7 /* Pods-Animals-SAMCache-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Animals-SAMCache-dummy.m"; sourceTree = "<group>"; };
+		1FE9C15F73FC41CF86B414EB /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = nl.lproj; path = FDTakeExample/nl.lproj; sourceTree = "<group>"; };
+		212F08FA743945F2ECEF3472 /* libPods-Animals-FDTake.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Animals-FDTake.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B2C8BC84C9B4E1F26649002 /* Pods-Animals-FDTake-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Animals-FDTake-dummy.m"; sourceTree = "<group>"; };
+		37C769E182ECC3516E7BCDBC /* zh-Hant.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = "zh-Hant.lproj"; path = "FDTakeExample/zh-Hant.lproj"; sourceTree = "<group>"; };
+		3A515F03089DB6D2AD94985B /* tr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = tr.lproj; path = FDTakeExample/tr.lproj; sourceTree = "<group>"; };
+		3ACCF8F54C3FAC03DC972C4C /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = "zh-Hans.lproj"; path = "FDTakeExample/zh-Hans.lproj"; sourceTree = "<group>"; };
+		3B767571A512FE888F13562B /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ru.lproj; path = FDTakeExample/ru.lproj; sourceTree = "<group>"; };
+		3BECA03520104D17F5F51C7A /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = es.lproj; path = FDTakeExample/es.lproj; sourceTree = "<group>"; };
+		424EEA4096CD67BABAB9BD14 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4BEE3D2E45CA5230AC400D05 /* SAMCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAMCache.h; path = SAMCache/SAMCache.h; sourceTree = "<group>"; };
+		5B8C05BED141494C62544785 /* Pods-Animals-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Animals-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5C05EA7F2B37874E0109477D /* libPods-Animals.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Animals.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DBCC347D3361EA808A2C718 /* da.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = da.lproj; path = FDTakeExample/da.lproj; sourceTree = "<group>"; };
+		648612771C26EE6D4D565FA5 /* nb.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = nb.lproj; path = FDTakeExample/nb.lproj; sourceTree = "<group>"; };
+		6986C41752E1B75B2F96AE4C /* Pods-Animals-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Animals-dummy.m"; sourceTree = "<group>"; };
+		76803152999DFFBD8F862FEF /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = fr.lproj; path = FDTakeExample/fr.lproj; sourceTree = "<group>"; };
+		7C31211D2A09FC5EE224E452 /* el.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = el.lproj; path = FDTakeExample/el.lproj; sourceTree = "<group>"; };
+		8AFB040CC541B8251C859950 /* Pods-Animals-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Animals-resources.sh"; sourceTree = "<group>"; };
+		8B2D3F34D62BB51FEC0AE423 /* Pods-Animals-SAMCache-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Animals-SAMCache-prefix.pch"; sourceTree = "<group>"; };
+		8D247F9040584C3F1DCA7B58 /* pt.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = pt.lproj; path = FDTakeExample/pt.lproj; sourceTree = "<group>"; };
+		908EBE82594A3244ADD0F53F /* Pods-Animals-FDTake.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Animals-FDTake.xcconfig"; sourceTree = "<group>"; };
+		9211B3B1EA2A507BFB05F5FA /* libPods-Animals-SAMCache.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Animals-SAMCache.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		997CD57455E6D837AF002234 /* ar.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ar.lproj; path = FDTakeExample/ar.lproj; sourceTree = "<group>"; };
+		A00858EFF4FD109239707311 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A74CEFED969447AB489A746B /* sv.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = sv.lproj; path = FDTakeExample/sv.lproj; sourceTree = "<group>"; };
+		BBB038E40970BE5617C81D3E /* Pods-Animals-FDTake-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Animals-FDTake-Private.xcconfig"; sourceTree = "<group>"; };
+		BBD027FD2B1C830885FB6B32 /* FDTakeController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FDTakeController.h; path = FDTakeExample/FDTakeController.h; sourceTree = "<group>"; };
+		C679881C571FD4CE22E48D72 /* FDTakeController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FDTakeController.m; path = FDTakeExample/FDTakeController.m; sourceTree = "<group>"; };
+		D545B73CBA03B7C397EDFC01 /* SAMCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SAMCache.m; path = SAMCache/SAMCache.m; sourceTree = "<group>"; };
+		D75BFB1AA926BB4B386A11FA /* Pods-Animals-FDTake-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Animals-FDTake-prefix.pch"; sourceTree = "<group>"; };
+		DEF450DE76776FDB4FB6A9D7 /* Pods-Animals-SAMCache.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Animals-SAMCache.xcconfig"; sourceTree = "<group>"; };
+		E3BE6FEDA984060B92A8BEA8 /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = de.lproj; path = FDTakeExample/de.lproj; sourceTree = "<group>"; };
+		F8ABA948783FB0E15098B085 /* Pods-Animals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Animals.release.xcconfig"; sourceTree = "<group>"; };
+		FAC34E581F4C1353800A4A95 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = en.lproj; path = FDTakeExample/en.lproj; sourceTree = "<group>"; };
+		FDFEB458CA6B2A430D1DA40A /* pl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = pl.lproj; path = FDTakeExample/pl.lproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BB4255EC915995AC2091E05A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48A7162EE5B296CE78A2798F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2C90F614044303BA20281FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3EB85930E9F4D14BD598A1E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1878750FF74B7B9406963C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F861F16898E6FF31CD19DBA2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0561A55E9901D559175BE9FA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DEF450DE76776FDB4FB6A9D7 /* Pods-Animals-SAMCache.xcconfig */,
+				000FC76467EB813859B231EC /* Pods-Animals-SAMCache-Private.xcconfig */,
+				1B2F6292E4ACF8761D2E87F7 /* Pods-Animals-SAMCache-dummy.m */,
+				8B2D3F34D62BB51FEC0AE423 /* Pods-Animals-SAMCache-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-Animals-SAMCache";
+			sourceTree = "<group>";
+		};
+		0F0BE194BD9B591F1F5D682B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF32E5A8E2630BB710BDA80 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1DF32E5A8E2630BB710BDA80 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				424EEA4096CD67BABAB9BD14 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5348227228555ECF803C83C5 /* Pods-Animals */ = {
+			isa = PBXGroup;
+			children = (
+				5B8C05BED141494C62544785 /* Pods-Animals-acknowledgements.markdown */,
+				05A5662C6B39D83B60477726 /* Pods-Animals-acknowledgements.plist */,
+				6986C41752E1B75B2F96AE4C /* Pods-Animals-dummy.m */,
+				18F7285EF5F959688883A9D9 /* Pods-Animals-environment.h */,
+				8AFB040CC541B8251C859950 /* Pods-Animals-resources.sh */,
+				041E14B35ED2D5AFCBDA89B5 /* Pods-Animals.debug.xcconfig */,
+				F8ABA948783FB0E15098B085 /* Pods-Animals.release.xcconfig */,
+			);
+			name = "Pods-Animals";
+			path = "Target Support Files/Pods-Animals";
+			sourceTree = "<group>";
+		};
+		566B5D13A9D7281EEBDE3918 /* FDTake */ = {
+			isa = PBXGroup;
+			children = (
+				BBD027FD2B1C830885FB6B32 /* FDTakeController.h */,
+				C679881C571FD4CE22E48D72 /* FDTakeController.m */,
+				6E87DB25836722DA0A9618E9 /* Resources */,
+				D48ADF6EF04FA31575DCD37B /* Support Files */,
+			);
+			path = FDTake;
+			sourceTree = "<group>";
+		};
+		6E87DB25836722DA0A9618E9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				997CD57455E6D837AF002234 /* ar.lproj */,
+				5DBCC347D3361EA808A2C718 /* da.lproj */,
+				E3BE6FEDA984060B92A8BEA8 /* de.lproj */,
+				7C31211D2A09FC5EE224E452 /* el.lproj */,
+				FAC34E581F4C1353800A4A95 /* en.lproj */,
+				3BECA03520104D17F5F51C7A /* es.lproj */,
+				76803152999DFFBD8F862FEF /* fr.lproj */,
+				18CECD40327B7A6B798C0067 /* he.lproj */,
+				648612771C26EE6D4D565FA5 /* nb.lproj */,
+				1FE9C15F73FC41CF86B414EB /* nl.lproj */,
+				FDFEB458CA6B2A430D1DA40A /* pl.lproj */,
+				8D247F9040584C3F1DCA7B58 /* pt.lproj */,
+				3B767571A512FE888F13562B /* ru.lproj */,
+				A74CEFED969447AB489A746B /* sv.lproj */,
+				3A515F03089DB6D2AD94985B /* tr.lproj */,
+				3ACCF8F54C3FAC03DC972C4C /* zh-Hans.lproj */,
+				37C769E182ECC3516E7BCDBC /* zh-Hant.lproj */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		6EB384D8A22C2B84888CF234 = {
+			isa = PBXGroup;
+			children = (
+				A00858EFF4FD109239707311 /* Podfile */,
+				0F0BE194BD9B591F1F5D682B /* Frameworks */,
+				C9F9F2BD3B23716AFCCCCE71 /* Pods */,
+				C8FAF3F934C1E810807DA464 /* Products */,
+				AE0D4F9DBC01A6FD11E19430 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		AE0D4F9DBC01A6FD11E19430 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5348227228555ECF803C83C5 /* Pods-Animals */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		C8FAF3F934C1E810807DA464 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5C05EA7F2B37874E0109477D /* libPods-Animals.a */,
+				212F08FA743945F2ECEF3472 /* libPods-Animals-FDTake.a */,
+				9211B3B1EA2A507BFB05F5FA /* libPods-Animals-SAMCache.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9F9F2BD3B23716AFCCCCE71 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				566B5D13A9D7281EEBDE3918 /* FDTake */,
+				F2ADC1761879DE1DD4F57FFF /* SAMCache */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D48ADF6EF04FA31575DCD37B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				908EBE82594A3244ADD0F53F /* Pods-Animals-FDTake.xcconfig */,
+				BBB038E40970BE5617C81D3E /* Pods-Animals-FDTake-Private.xcconfig */,
+				2B2C8BC84C9B4E1F26649002 /* Pods-Animals-FDTake-dummy.m */,
+				D75BFB1AA926BB4B386A11FA /* Pods-Animals-FDTake-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-Animals-FDTake";
+			sourceTree = "<group>";
+		};
+		F2ADC1761879DE1DD4F57FFF /* SAMCache */ = {
+			isa = PBXGroup;
+			children = (
+				4BEE3D2E45CA5230AC400D05 /* SAMCache.h */,
+				D545B73CBA03B7C397EDFC01 /* SAMCache.m */,
+				0561A55E9901D559175BE9FA /* Support Files */,
+			);
+			path = SAMCache;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		373BAE2D99B2D24A0E162224 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F58D706CB15EDA776377AC7A /* FDTakeController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7025BD5BDA792D55820DC835 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BAC9E555F7FDCDCCF77D938 /* SAMCache.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		324D14473F45A31B02B3B554 /* Pods-Animals-SAMCache */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1F043DF813A0A587EAE9329 /* Build configuration list for PBXNativeTarget "Pods-Animals-SAMCache" */;
+			buildPhases = (
+				C66E68B8DB0778BEF8B36B80 /* Sources */,
+				BB4255EC915995AC2091E05A /* Frameworks */,
+				7025BD5BDA792D55820DC835 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Animals-SAMCache";
+			productName = "Pods-Animals-SAMCache";
+			productReference = 9211B3B1EA2A507BFB05F5FA /* libPods-Animals-SAMCache.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A6AF1804E109918748594D90 /* Pods-Animals */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39E75DE8FCF8689F382EFCAE /* Build configuration list for PBXNativeTarget "Pods-Animals" */;
+			buildPhases = (
+				22443D0C9745373CF9726BC8 /* Sources */,
+				F1878750FF74B7B9406963C4 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				60D1480B2067A74F09D1D8ED /* PBXTargetDependency */,
+				D62B6AFDA9F83AAD02D7D931 /* PBXTargetDependency */,
+			);
+			name = "Pods-Animals";
+			productName = "Pods-Animals";
+			productReference = 5C05EA7F2B37874E0109477D /* libPods-Animals.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		BE00BFA0C67C2ED4925933F4 /* Pods-Animals-FDTake */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AB180BDEB1A14892ACFE67E /* Build configuration list for PBXNativeTarget "Pods-Animals-FDTake" */;
+			buildPhases = (
+				0495D107607D95E6A2E1BC85 /* Sources */,
+				D2C90F614044303BA20281FB /* Frameworks */,
+				373BAE2D99B2D24A0E162224 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Animals-FDTake";
+			productName = "Pods-Animals-FDTake";
+			productReference = 212F08FA743945F2ECEF3472 /* libPods-Animals-FDTake.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		05C310DEF92F8879436DBD15 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = 23E1880948D2CB198EB5937A /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6EB384D8A22C2B84888CF234;
+			productRefGroup = C8FAF3F934C1E810807DA464 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A6AF1804E109918748594D90 /* Pods-Animals */,
+				BE00BFA0C67C2ED4925933F4 /* Pods-Animals-FDTake */,
+				324D14473F45A31B02B3B554 /* Pods-Animals-SAMCache */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0495D107607D95E6A2E1BC85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7000DD51CC4AA5820189B8AA /* FDTakeController.m in Sources */,
+				E2B0FE383F9D248F1F3CED61 /* Pods-Animals-FDTake-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22443D0C9745373CF9726BC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9781FC63313842946173C33 /* Pods-Animals-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C66E68B8DB0778BEF8B36B80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1925C153DC9272E3B677814A /* Pods-Animals-SAMCache-dummy.m in Sources */,
+				865D6D5558C76F7E06C8F69B /* SAMCache.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		60D1480B2067A74F09D1D8ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Animals-FDTake";
+			target = BE00BFA0C67C2ED4925933F4 /* Pods-Animals-FDTake */;
+			targetProxy = CF515DDF459BF2E640629504 /* PBXContainerItemProxy */;
+		};
+		D62B6AFDA9F83AAD02D7D931 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Animals-SAMCache";
+			target = 324D14473F45A31B02B3B554 /* Pods-Animals-SAMCache */;
+			targetProxy = 99D3C28C6AECD47B658D8F40 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3C812BE49F2C4B7F3578AAC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 000FC76467EB813859B231EC /* Pods-Animals-SAMCache-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Animals-SAMCache/Pods-Animals-SAMCache-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		45FECC5DCA5B5BA8EC3A159A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBB038E40970BE5617C81D3E /* Pods-Animals-FDTake-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Animals-FDTake/Pods-Animals-FDTake-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		50992D46DF025FA97F14B6E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		591DF2941680EE3F31EC470F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBB038E40970BE5617C81D3E /* Pods-Animals-FDTake-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Animals-FDTake/Pods-Animals-FDTake-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		AEF228BD464432A7D52E6A64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8ABA948783FB0E15098B085 /* Pods-Animals.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		C3BB1EE702D6A554845FDF42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 000FC76467EB813859B231EC /* Pods-Animals-SAMCache-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Animals-SAMCache/Pods-Animals-SAMCache-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D46EF927ACDD5AAC78B44455 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 041E14B35ED2D5AFCBDA89B5 /* Pods-Animals.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		FC62EDF3B0F3BFDF2C5D8575 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		23E1880948D2CB198EB5937A /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC62EDF3B0F3BFDF2C5D8575 /* Debug */,
+				50992D46DF025FA97F14B6E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		39E75DE8FCF8689F382EFCAE /* Build configuration list for PBXNativeTarget "Pods-Animals" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D46EF927ACDD5AAC78B44455 /* Debug */,
+				AEF228BD464432A7D52E6A64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AB180BDEB1A14892ACFE67E /* Build configuration list for PBXNativeTarget "Pods-Animals-FDTake" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45FECC5DCA5B5BA8EC3A159A /* Debug */,
+				591DF2941680EE3F31EC470F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1F043DF813A0A587EAE9329 /* Build configuration list for PBXNativeTarget "Pods-Animals-SAMCache" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C812BE49F2C4B7F3578AAC5 /* Debug */,
+				C3BB1EE702D6A554845FDF42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 05C310DEF92F8879436DBD15 /* Project object */;
+}

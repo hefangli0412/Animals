@@ -33,13 +33,11 @@ static NSString * const lockedTVCellIdentifier = @"LockedTVCell";
     
     self.popView = [PopCategory newPopCategory];
     self.popView.delegate = self;
-    self.popView.frame = CGRectMake(215, 60, self.popView.frame.size.width, self.popView.frame.size.height);
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    self.popView.frame = CGRectMake(screenWidth-self.popView.frame.size.width-20, 60, self.popView.frame.size.width, self.popView.frame.size.height);
     [self.navigationController.view addSubview:self.popView];
     self.popView.hidden = YES;
-    
-//    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapReceived:)];
-//    [tapGestureRecognizer setDelegate:self];
-//    [self.view addGestureRecognizer:tapGestureRecognizer];
     
     NSMutableDictionary *newAttributes = [[NSMutableDictionary alloc] init];
     [newAttributes setObject:[UIFont fontWithName:@"Chalkboard SE" size:22] forKey:UITextAttributeFont];
@@ -57,18 +55,6 @@ static NSString * const lockedTVCellIdentifier = @"LockedTVCell";
     self.navigationController.navigationBar.topItem.title = category;
     self.popView.hidden = YES;
 }
-
-#pragma mark - Touch events
-
-//-(void)tapReceived:(UITapGestureRecognizer *)tapGestureRecognizer
-//{
-//    CGPoint touchLocation = [tapGestureRecognizer locationInView: nil];
-//    
-//    CGRect popRect = [self.popView.layer frame];
-//    if (!CGRectContainsPoint(popRect, touchLocation)) {
-//        self.popView.hidden = YES;
-//    }
-//}
 
 #pragma mark - Table view data source
 
@@ -140,6 +126,10 @@ static NSString * const lockedTVCellIdentifier = @"LockedTVCell";
     }
 //    self.someProperty = [self.someArray objectAtIndex:indexPath.row];
     
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    self.popView.hidden = YES;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

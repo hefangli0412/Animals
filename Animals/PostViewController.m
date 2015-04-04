@@ -13,7 +13,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *speciesButton;
 @property (weak, nonatomic) IBOutlet UIImageView *muzzleImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *eyesImageView;
-@property (weak, nonatomic) IBOutlet UITextField *numberTextField;
+@property (weak, nonatomic) IBOutlet UILabel *birthdayDateLabel;
+@property (weak, nonatomic) IBOutlet UIView *datePickerSuperView;
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 @property (strong, nonatomic) PopCategoryWide *popView;
 @end
 
@@ -27,35 +29,38 @@
     
     self.popView = [PopCategoryWide newPopCategoryWide];
     self.popView.delegate = self;
-    self.popView.frame = CGRectMake(127, 314+64, self.popView.frame.size.width, self.popView.frame.size.height);
-    [self.navigationController.view addSubview:self.popView];
-    self.popView.hidden = YES;
     
-    UIToolbar* numberToolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
-    numberToolbar.barStyle = UIBarStyleDefault;
-    numberToolbar.items = [NSArray arrayWithObjects:
-                           [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
-                           [[UIBarButtonItem alloc]initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(doneWithNumberPad)],
-                           nil];
-    [numberToolbar sizeToFit];
-    self.numberTextField.inputAccessoryView = numberToolbar;
+//    UIToolbar* numberToolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
+//    numberToolbar.barStyle = UIBarStyleDefault;
+//    numberToolbar.items = [NSArray arrayWithObjects:
+//                           [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
+//                           [[UIBarButtonItem alloc]initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(doneWithNumberPad)],
+//                           nil];
+//    [numberToolbar sizeToFit];
+//    self.numberTextField.inputAccessoryView = numberToolbar;
 }
 
--(void)doneWithNumberPad{
-    if (false) {
-        self.numberTextField.text = @"";
-    }    
-    [self.numberTextField resignFirstResponder];
-}
+//- (void)doneWithNumberPad{
+//    if (false) {
+//        self.numberTextField.text = @"";
+//    }    
+//    [self.numberTextField resignFirstResponder];
+//}
 
 #pragma mark - Dropdown menu
-- (IBAction)dropdownMenuPressed:(UIButton *)sender {
-    self.popView.hidden = NO;
+- (IBAction)speciesDropdownMenuPressed:(UIButton *)sender {
+    CGFloat x = sender.frame.origin.x;
+    CGFloat y = sender.frame.origin.y;
+    CGFloat width = sender.frame.size.width;
+    CGFloat height = sender.frame.size.height;
+    CGRect newFrame = CGRectMake(x, y+height, width, self.popView.frame.size.height);
+    self.popView.frame = newFrame;
+    [self.view addSubview:self.popView];
 }
 
 - (void)PopCategoryWide:(PopCategoryWide *)popView categoryDidChange:(NSString *)category {
     [self.speciesButton setTitle:category forState:UIControlStateNormal];
-    popView.hidden = YES;
+    [self.popView removeFromSuperview];
 }
 
 #pragma mark - Touch events
@@ -65,8 +70,12 @@
     CGPoint touchLocation = [touch locationInView:self.view];
     
     CGRect popRect = [self.popView.layer frame];
+    CGRect birthdayRect = [self.popView.layer frame];
     if (!CGRectContainsPoint(popRect, touchLocation)) {
-        self.popView.hidden = YES;
+        [self.popView removeFromSuperview];
+    }
+    if (CGRectContainsPoint(birthdayRect, touchLocation)) {
+        self.datePickerSuperView.hidden = NO;
     }
 }
 

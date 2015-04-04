@@ -71,6 +71,7 @@
 		CDAD99D31ACF2B8C00B9E834 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDAD99D21ACF2B8C00B9E834 /* CameraViewController.m */; };
 		CDAD99D61ACF2D8E00B9E834 /* eyeplaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = CDAD99D41ACF2D8E00B9E834 /* eyeplaceholder.png */; };
 		CDAD99D91ACF65AE00B9E834 /* muzzleplaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = CDAD99D81ACF65AE00B9E834 /* muzzleplaceholder.png */; };
+		CDAD99DC1ACFC7DA00B9E834 /* SquareView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDAD99DB1ACFC7DA00B9E834 /* SquareView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,6 +171,8 @@
 		CDAD99D21ACF2B8C00B9E834 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		CDAD99D41ACF2D8E00B9E834 /* eyeplaceholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = eyeplaceholder.png; path = Images/eyeplaceholder.png; sourceTree = "<group>"; };
 		CDAD99D81ACF65AE00B9E834 /* muzzleplaceholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = muzzleplaceholder.png; sourceTree = "<group>"; };
+		CDAD99DA1ACFC7DA00B9E834 /* SquareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareView.h; sourceTree = "<group>"; };
+		CDAD99DB1ACFC7DA00B9E834 /* SquareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareView.m; sourceTree = "<group>"; };
 		CDBBD7A51ACA3AD800D82B62 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -319,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				CD65DF041ABCBB2800AC3637 /* Application Files */,
+				CD65DF0E1ABCBB2800AC3637 /* Main.storyboard */,
 				CD46E6C51ACF11F4002065B2 /* LoginViewController.h */,
 				CD46E6C61ACF11F4002065B2 /* LoginViewController.m */,
 				CD65DF2A1ABCBFEA00AC3637 /* BrowseViewController.h */,
@@ -337,7 +341,8 @@
 				CD46E6C91ACF165F002065B2 /* UserViewController.m */,
 				CD2FA9C81ABFD53C008E575F /* TabBarController.h */,
 				CD2FA9C91ABFD53C008E575F /* TabBarController.m */,
-				CD65DF0E1ABCBB2800AC3637 /* Main.storyboard */,
+				CDAD99DA1ACFC7DA00B9E834 /* SquareView.h */,
+				CDAD99DB1ACFC7DA00B9E834 /* SquareView.m */,
 				CD65DF111ABCBB2800AC3637 /* Images.xcassets */,
 				CD64E1A51ABE1A9700CB5973 /* PopCategories */,
 				CD65DF371ABCC02A00AC3637 /* TableCells */,
@@ -584,6 +589,7 @@
 				CD64E1651ABDEE0900CB5973 /* PostViewController.m in Sources */,
 				CD65DF2C1ABCBFEA00AC3637 /* BrowseViewController.m in Sources */,
 				CD46E6C71ACF11F4002065B2 /* LoginViewController.m in Sources */,
+				CDAD99DC1ACFC7DA00B9E834 /* SquareView.m in Sources */,
 				CD53243E1AC216C3003F133A /* LockedTableViewCell.m in Sources */,
 				CD5324261AC21585003F133A /* Initialization.m in Sources */,
 				CD5324371AC21662003F133A /* main.m in Sources */,

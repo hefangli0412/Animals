@@ -79,12 +79,15 @@
     CGPoint targetTextFieldLowerPoint = CGPointMake(self.activeTextField.frame.origin.x, self.keyboardFrame.origin.y - kPreferredTextFieldToKeyboardOffset);
     
     CGFloat targetPointOffset = targetTextFieldLowerPoint.y - convertedTextFieldLowerPoint.y;
-    CGPoint adjustedViewFrameCenter = CGPointMake(self.view.center.x,
-                                                  self.view.center.y + targetPointOffset);
-
-    [UIView animateWithDuration:0.2 animations:^{
-        self.view.center = adjustedViewFrameCenter;
-    }];
+    
+    if (targetPointOffset < 0) {
+        CGPoint adjustedViewFrameCenter = CGPointMake(self.view.center.x,
+                                                      self.view.center.y + targetPointOffset);
+        
+        [UIView animateWithDuration:0.2 animations:^{
+            self.view.center = adjustedViewFrameCenter;
+        }];
+    }
 }
 
 - (void)returnViewToInitialFrame

@@ -10,8 +10,10 @@
 #import "CameraSelectionViewController.h"
 #import "FDTakeController.h"
 
-@interface CameraViewController () <FDTakeDelegate>
-
+@interface CameraViewController () <
+FDTakeDelegate,
+UITabBarControllerDelegate
+>
 @property FDTakeController *takeController;
 
 @property (weak, nonatomic) IBOutlet UIImageView *muzzleImageView;
@@ -45,6 +47,10 @@
     NSLog(@"%@", str);
     
     self.takeController.allowsEditingPhoto = YES;
+    
+    // TabBar Controller
+    UITabBarController *tbc = (UITabBarController*) self.parentViewController.parentViewController;
+    tbc.delegate = self;
 }
 
 - (void)takePhotoOrChooseFromLibrary
@@ -98,29 +104,39 @@
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
     if ([identifier isEqualToString:@"CameraSegue"]) {
         //Put your validation code here and return YES or NO as needed
-        if (self.muzzleImageView.image == nil && self.eyesImageView.image == nil) {
-            UIAlertView *alertView;
-            alertView = [[UIAlertView alloc] initWithTitle:@"" message:@"Please take photos of animal muzzle and eyes" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-            [alertView show];
-            return NO;
-        }
-        if (self.muzzleImageView.image == nil) {
-            UIAlertView *alertView;
-            alertView = [[UIAlertView alloc] initWithTitle:@"" message:@"Please take photo of animal muzzle" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-            [alertView show];
-            return NO;
-        }
-        if (self.eyesImageView.image == nil) {
-            UIAlertView *alertView;
-            alertView = [[UIAlertView alloc] initWithTitle:@"" message:@"Please take photo of animal eyes" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-            [alertView show];
-            return NO;
-        }
+//        if (self.muzzleImageView.image == nil && self.eyesImageView.image == nil) {
+//            UIAlertView *alertView;
+//            alertView = [[UIAlertView alloc] initWithTitle:@"" message:@"Please take photos of animal muzzle and eyes" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+//            [alertView show];
+//            return NO;
+//        }
+//        if (self.muzzleImageView.image == nil) {
+//            UIAlertView *alertView;
+//            alertView = [[UIAlertView alloc] initWithTitle:@"" message:@"Please take photo of animal muzzle" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+//            [alertView show];
+//            return NO;
+//        }
+//        if (self.eyesImageView.image == nil) {
+//            UIAlertView *alertView;
+//            alertView = [[UIAlertView alloc] initWithTitle:@"" message:@"Please take photo of animal eyes" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+//            [alertView show];
+//            return NO;
+//        }
         
         return YES;
     }
     
     return YES;
+}
+
+- (void)reset {
+    self.muzzleImageView.image = nil;
+    self.eyesImageView.image = nil;
+    self.selectedImageView = nil;
+    self.muzzleClickLabel.hidden = NO;
+    self.eyesClickLabel.hidden = NO;
+    
+    [self.navigationController popToViewController:self animated:NO];
 }
 
 @end

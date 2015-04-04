@@ -17,7 +17,6 @@
     
     me.layer.cornerRadius = 5;
     me.layer.masksToBounds = YES;
-    
     return me;
 }
 
