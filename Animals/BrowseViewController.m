@@ -16,8 +16,10 @@ static NSString * const unlockedTVCellIdentifier = @"UnlockedTVCell";
 static NSString * const lockedTVCellIdentifier = @"LockedTVCell";
 
 @interface BrowseViewController () <PopCategoryDelegate, UIGestureRecognizerDelegate>
-@property (strong, nonatomic) PopCategory *popView;
+@property (nonatomic, strong) PopCategory *popView;
 @property (nonatomic, strong) UnlockedTableViewCell *unlockedPrototypeCell;
+@property (nonatomic) CGPoint lastOffset;
+@property (nonatomic) NSTimeInterval lastOffsetCapture;
 @end
 
 @implementation BrowseViewController
@@ -129,7 +131,23 @@ static NSString * const lockedTVCellIdentifier = @"LockedTVCell";
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    self.popView.hidden = YES;
+    CGPoint currentOffset = scrollView.contentOffset;
+    NSTimeInterval currentTime = [NSDate timeIntervalSinceReferenceDate];
+    
+    NSTimeInterval timeDiff = currentTime - self.lastOffsetCapture;
+    if(timeDiff > 0.1) {
+        CGFloat distance = currentOffset.y - self.lastOffset.y;
+        //The multiply by 10, / 1000 isn't really necessary.......
+        CGFloat scrollSpeedNotAbs = (distance * 10) / 1000; //in pixels per millisecond
+        
+        CGFloat scrollSpeed = fabsf(scrollSpeedNotAbs);
+        if (scrollSpeed > 0.6) {
+            self.popView.hidden = YES;
+        }
+        
+        self.lastOffset = currentOffset;
+        self.lastOffsetCapture = currentTime;
+    }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
