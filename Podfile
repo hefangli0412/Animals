@@ -3,7 +3,7 @@ platform :ios, '7.1'
 
 target 'Animals' do
     pod 'SAMCache', '~> 0.3.0'
-    pod 'FDTake'
+#    pod 'FDTake'
 end
 
 target 'AnimalsTests' do

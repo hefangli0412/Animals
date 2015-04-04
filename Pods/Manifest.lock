@@ -1,13 +1,10 @@
 PODS:
-  - FDTake (0.2.4)
   - SAMCache (0.3.0)
 
 DEPENDENCIES:
-  - FDTake
   - SAMCache (~> 0.3.0)
 
 SPEC CHECKSUMS:
-  FDTake: 6ff34778a1d0b5d5a1883fc6773e158ed89bd473
   SAMCache: 418d532c4ecab283e7758576856aeab461a69dde
 
 COCOAPODS: 0.36.0

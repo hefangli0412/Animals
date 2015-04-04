@@ -15,8 +15,8 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        self.opaque=NO;
-        self.backgroundColor=[UIColor clearColor];
+        self.opaque = NO;
+        self.backgroundColor = [UIColor clearColor];
     }
     return self;
 }
@@ -31,41 +31,48 @@
     CGRect bounds=self.bounds;
     //Figure out the center of the bounds rectangle.
     
-    CGPoint center;
+//    CGPoint center;
     
-    center.x=bounds.origin.x+bounds.size.width/2.0;
-    center.y=bounds.origin.y+bounds.size.height/2.0;
-    
-    
-    //I make the radius a 10th the length of the hypotenuse:
-    
-    float radius=hypot(bounds.size.width, bounds.size.height)/10.0;
+//    center.x=bounds.origin.x+bounds.size.width/2.0;
+//    center.y=bounds.origin.y+bounds.size.height/2.0;
+//    
+//    
+//    //I make the radius a 10th the length of the hypotenuse:
+//    
+//    float radius=hypot(bounds.size.width, bounds.size.height)/10.0;
     
     
     //Draw using UIBezierPath:
     
     UIBezierPath *path=[[UIBezierPath alloc]init];
     //
-    [path addArcWithCenter:center radius:radius startAngle:0 endAngle:M_PI*2 clockwise:YES];
+//    [path addArcWithCenter:center radius:radius startAngle:0 endAngle:M_PI*2 clockwise:YES];
+//    
+//    [path moveToPoint:CGPointMake(center.x, center.y-radius-15)];
+//    
+//    [path addLineToPoint:CGPointMake(center.x, center.y-radius+15)];
+//    
+//    [path moveToPoint:CGPointMake(center.x, center.y+radius-15)];
+//    
+//    [path addLineToPoint:CGPointMake(center.x, center.y+radius+15)];
+//    
+//    [path moveToPoint:CGPointMake(center.x-radius-15, center.y)];
+//    
+//    [path addLineToPoint:CGPointMake(center.x-radius+15, center.y)];
+//    
+//    [path moveToPoint:CGPointMake(center.x+radius-15, center.y)];
+//    
+//    [path addLineToPoint:CGPointMake(center.x+radius+15, center.y)];
     
-    [path moveToPoint:CGPointMake(center.x, center.y-radius-15)];
+    CGFloat width = bounds.size.width;
+    CGFloat height = bounds.size.height;
     
-    [path addLineToPoint:CGPointMake(center.x, center.y-radius+15)];
-    
-    [path moveToPoint:CGPointMake(center.x, center.y+radius-15)];
-    
-    [path addLineToPoint:CGPointMake(center.x, center.y+radius+15)];
-    
-    [path moveToPoint:CGPointMake(center.x-radius-15, center.y)];
-    
-    [path addLineToPoint:CGPointMake(center.x-radius+15, center.y)];
-    
-    [path moveToPoint:CGPointMake(center.x+radius-15, center.y)];
-    
-    [path addLineToPoint:CGPointMake(center.x+radius+15, center.y)];
-    
-    
-    path.lineWidth=7;
+    path.lineWidth = 6;
+    [path moveToPoint:CGPointMake(width/20 - path.lineWidth/2, height/20)];
+    [path addLineToPoint:CGPointMake(width*19/20, height/20)];
+    [path addLineToPoint:CGPointMake(width*19/20, height*19/20)];
+    [path addLineToPoint:CGPointMake(width/20, height*19/20)];
+    [path addLineToPoint:CGPointMake(width/20, height/20 - path.lineWidth/2)];
     
     [[UIColor lightGrayColor] setStroke];
     

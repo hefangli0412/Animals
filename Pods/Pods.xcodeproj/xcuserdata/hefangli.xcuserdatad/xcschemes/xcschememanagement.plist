@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-Animals-FDTake.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-Animals-SAMCache.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>324D14473F45A31B02B3B554</key>
+		<key>986E9931C2F62255D99E0231</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A6AF1804E109918748594D90</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>BE00BFA0C67C2ED4925933F4</key>
+		<key>B6BB546D366F33A07A1A71BA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

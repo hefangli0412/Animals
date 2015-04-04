@@ -596,13 +596,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BXA-GA-r0l">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BXA-GA-r0l">
                                 <rect key="frame" x="96" y="29" width="128" height="128"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="muzzleplaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="5j9-bb-2cl">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                     </imageView>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dLV-FT-jOA">
+                                    <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dLV-FT-jOA">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                     </imageView>
                                 </subviews>
@@ -619,13 +619,13 @@
                                     <constraint firstItem="dLV-FT-jOA" firstAttribute="top" secondItem="BXA-GA-r0l" secondAttribute="top" id="pQb-TS-57m"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="flC-i5-yex">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="flC-i5-yex">
                                 <rect key="frame" x="96" y="192" width="128" height="128"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eyeplaceholder.png" translatesAutoresizingMaskIntoConstraints="NO" id="D8Q-uJ-Ah0">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                     </imageView>
-                                    <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zaC-RQ-mBV">
+                                    <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zaC-RQ-mBV">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                     </imageView>
                                 </subviews>

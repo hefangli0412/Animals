@@ -47,6 +47,12 @@
 //    [self.numberTextField resignFirstResponder];
 //}
 
+//- (void)viewWillDisappear:(BOOL)animated {
+//    UIAlertView *alertView;
+//    alertView = [[UIAlertView alloc] initWithTitle:@"Discard the changes?" message:@"" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:@"Leave",nil];
+//    [alertView show];
+//}
+
 #pragma mark - Dropdown menu
 - (IBAction)speciesDropdownMenuPressed:(UIButton *)sender {
     CGFloat x = sender.frame.origin.x;
@@ -75,7 +81,7 @@
         [self.popView removeFromSuperview];
     }
     if (CGRectContainsPoint(birthdayRect, touchLocation)) {
-        self.datePickerSuperView.hidden = NO;
+//        self.datePickerSuperView.hidden = NO;
     }
 }
 

@@ -72,6 +72,8 @@
 		CDAD99D61ACF2D8E00B9E834 /* eyeplaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = CDAD99D41ACF2D8E00B9E834 /* eyeplaceholder.png */; };
 		CDAD99D91ACF65AE00B9E834 /* muzzleplaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = CDAD99D81ACF65AE00B9E834 /* muzzleplaceholder.png */; };
 		CDAD99DC1ACFC7DA00B9E834 /* SquareView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDAD99DB1ACFC7DA00B9E834 /* SquareView.m */; };
+		CDAD9A1B1AD0479500B9E834 /* FDTakeController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDAD9A1A1AD0479500B9E834 /* FDTakeController.m */; };
+		CDAD9A1E1AD0640900B9E834 /* NonRotatingUIImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDAD9A1D1AD0640900B9E834 /* NonRotatingUIImagePickerController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,6 +175,10 @@
 		CDAD99D81ACF65AE00B9E834 /* muzzleplaceholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = muzzleplaceholder.png; sourceTree = "<group>"; };
 		CDAD99DA1ACFC7DA00B9E834 /* SquareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareView.h; sourceTree = "<group>"; };
 		CDAD99DB1ACFC7DA00B9E834 /* SquareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareView.m; sourceTree = "<group>"; };
+		CDAD9A191AD0479500B9E834 /* FDTakeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDTakeController.h; sourceTree = "<group>"; };
+		CDAD9A1A1AD0479500B9E834 /* FDTakeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDTakeController.m; sourceTree = "<group>"; };
+		CDAD9A1C1AD0640900B9E834 /* NonRotatingUIImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NonRotatingUIImagePickerController.h; sourceTree = "<group>"; };
+		CDAD9A1D1AD0640900B9E834 /* NonRotatingUIImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NonRotatingUIImagePickerController.m; sourceTree = "<group>"; };
 		CDBBD7A51ACA3AD800D82B62 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -341,13 +347,12 @@
 				CD46E6C91ACF165F002065B2 /* UserViewController.m */,
 				CD2FA9C81ABFD53C008E575F /* TabBarController.h */,
 				CD2FA9C91ABFD53C008E575F /* TabBarController.m */,
-				CDAD99DA1ACFC7DA00B9E834 /* SquareView.h */,
-				CDAD99DB1ACFC7DA00B9E834 /* SquareView.m */,
 				CD65DF111ABCBB2800AC3637 /* Images.xcassets */,
 				CD64E1A51ABE1A9700CB5973 /* PopCategories */,
 				CD65DF371ABCC02A00AC3637 /* TableCells */,
 				CD64E13D1ABCCD4D00CB5973 /* Images */,
 				CD5324231AC2154D003F133A /* Cache */,
+				CDAD9A181AD0475600B9E834 /* FDTake */,
 				CD2FA9C71ABFCF23008E575F /* VBResponsiveTextFieldViewController */,
 				CD341EEA1ABFC27900665172 /* YCameraViewController */,
 			);
@@ -394,6 +399,19 @@
 				CD53243D1AC216C3003F133A /* UnlockedTableViewCell.xib */,
 			);
 			name = TableCells;
+			sourceTree = "<group>";
+		};
+		CDAD9A181AD0475600B9E834 /* FDTake */ = {
+			isa = PBXGroup;
+			children = (
+				CDAD9A191AD0479500B9E834 /* FDTakeController.h */,
+				CDAD9A1A1AD0479500B9E834 /* FDTakeController.m */,
+				CDAD99DA1ACFC7DA00B9E834 /* SquareView.h */,
+				CDAD99DB1ACFC7DA00B9E834 /* SquareView.m */,
+				CDAD9A1C1AD0640900B9E834 /* NonRotatingUIImagePickerController.h */,
+				CDAD9A1D1AD0640900B9E834 /* NonRotatingUIImagePickerController.m */,
+			);
+			name = FDTake;
 			sourceTree = "<group>";
 		};
 		D15DD6A1A53EEF98843C7220 /* Pods */ = {
@@ -586,6 +604,7 @@
 				CD64E15D1ABDDB9100CB5973 /* CameraSelectionViewController.m in Sources */,
 				CD5324351AC21662003F133A /* AppDelegate.m in Sources */,
 				CD46E6CA1ACF165F002065B2 /* UserViewController.m in Sources */,
+				CDAD9A1E1AD0640900B9E834 /* NonRotatingUIImagePickerController.m in Sources */,
 				CD64E1651ABDEE0900CB5973 /* PostViewController.m in Sources */,
 				CD65DF2C1ABCBFEA00AC3637 /* BrowseViewController.m in Sources */,
 				CD46E6C71ACF11F4002065B2 /* LoginViewController.m in Sources */,
@@ -595,6 +614,7 @@
 				CD5324371AC21662003F133A /* main.m in Sources */,
 				CD64E1B91ABF0F0900CB5973 /* DetailViewController.m in Sources */,
 				CD5324401AC216C3003F133A /* UnlockedTableViewCell.m in Sources */,
+				CDAD9A1B1AD0479500B9E834 /* FDTakeController.m in Sources */,
 				CDAD99D31ACF2B8C00B9E834 /* CameraViewController.m in Sources */,
 				CD2FA9CA1ABFD53C008E575F /* TabBarController.m in Sources */,
 				CD5324441AC2172C003F133A /* VBResponsiveTextFieldViewController.m in Sources */,

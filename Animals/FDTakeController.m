@@ -8,7 +8,8 @@
 
 #import "FDTakeController.h"
 #import <MobileCoreServices/MobileCoreServices.h>
-//#import "SquareView.h"
+#import "SquareView.h"
+#import "NonRotatingUIImagePickerController.h"
 
 #define kPhotosActionSheetTag 1
 #define kVideosActionSheetTag 2
@@ -27,7 +28,7 @@ static NSString * const kStringsTableName = @"FDTake";
 @property (strong, nonatomic) NSMutableArray *buttonTitles;
 @property (strong, nonatomic) UIActionSheet *actionSheet;
 @property (strong, nonatomic) UIPopoverController *popover;
-@property (strong, nonatomic) UIImagePickerController *imagePicker;
+@property (strong, nonatomic) NonRotatingUIImagePickerController *imagePicker;
 
 // Returns either optional view control for presenting or main window
 - (UIViewController*)presentingViewController;
@@ -66,10 +67,10 @@ static NSString * const kStringsTableName = @"FDTake";
     return _popOverPresentRect;
 }
 
-- (UIImagePickerController *)imagePicker
+- (NonRotatingUIImagePickerController *)imagePicker
 {
     if (!_imagePicker) {
-        _imagePicker = [[UIImagePickerController alloc] init];
+        _imagePicker = [[NonRotatingUIImagePickerController alloc] init];
         _imagePicker.delegate = self;
         _imagePicker.allowsEditing = YES;
     }
@@ -89,8 +90,6 @@ static NSString * const kStringsTableName = @"FDTake";
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         [self.sources addObject:[NSNumber numberWithInteger:UIImagePickerControllerSourceTypeCamera]];
         [self.buttonTitles addObject:[self textForButtonWithTitle:kTakePhotoKey]];
-//        SquareView *square = [[SquareView alloc] initWithFram:self.imagePicker.view.frame];
-//        self.imagePicker.cameraOverlayView = square;
     }
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
         [self.sources addObject:[NSNumber numberWithInteger:UIImagePickerControllerSourceTypePhotoLibrary]];
@@ -186,6 +185,18 @@ static NSString * const kStringsTableName = @"FDTake";
             }
         }
         
+//        // Changed here by Hefang
+////        CGFloat toolbarHeight = self.imagePicker.toolbar.frame.size.height;
+//        CGFloat toolbarHeight = self.imagePicker.navigationBar.bounds.size.height;
+//        CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+//        // at current screenwidth, 'previewHeight' is the height necessary to maintain the aspect ratio
+//        CGFloat previewHeight = screenWidth + (screenWidth / 3);
+//        CGRect squareFrame = CGRectMake(0, toolbarHeight + (previewHeight - screenWidth)/2, screenWidth, screenWidth);
+//        SquareView *squareView=[[SquareView alloc]initWithFrame:squareFrame];
+//        self.imagePicker.cameraOverlayView = squareView;
+//        
+//        _imagePicker.allowsEditing = NO;
+
         // On iPad use pop-overs.
         if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
             [self.popover presentPopoverFromRect:self.popOverPresentRect
