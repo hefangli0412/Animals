@@ -2,26 +2,24 @@
 //  CameraViewController.m
 //  Animals
 //
-//  Created by Hefang Li on 3/21/15.
+//  Created by Hefang Li on 4/3/15.
 //  Copyright (c) 2015 hefang. All rights reserved.
 //
 
 #import "CameraViewController.h"
-#import "SearchTVController.h"
-#import "PostViewController.h"
-#import <MobileCoreServices/UTCoreTypes.h>
-#import "YCameraViewController.h"
+#import "CameraSelectionViewController.h"
+#import "FDTakeController.h"
 
-@interface CameraViewController () <
-UITabBarControllerDelegate,
-YCameraViewControllerDelegate
->
-@property (nonatomic) UIViewController *currentChildVC;
-@property (weak, nonatomic) IBOutlet UIView *containerView;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *segControl;
-@property (strong, nonatomic) UIImage *image;
-@property (strong, nonatomic) UIBarButtonItem *cameraIdentifier;
-@property (strong, nonatomic) UIBarButtonItem *postIdentifier;
+@interface CameraViewController () <FDTakeDelegate>
+
+@property FDTakeController *takeController;
+
+@property (weak, nonatomic) IBOutlet UIImageView *muzzleImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *eyesImageView;
+@property (strong, nonatomic) UIImageView *selectedImageView;
+@property (weak, nonatomic) IBOutlet UILabel *muzzleClickLabel;
+@property (weak, nonatomic) IBOutlet UILabel *eyesClickLabel;
+
 @end
 
 @implementation CameraViewController
@@ -29,113 +27,100 @@ YCameraViewControllerDelegate
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    SearchTVController *first = [self.storyboard instantiateViewControllerWithIdentifier:@"SearchViewController"];
-    first.image = self.image;
-    [self presentChildController:first];
+    self.takeController = [[FDTakeController alloc] init];
+    self.takeController.delegate = self;
+    // You can optionally override action sheet titles
+    //	self.takeController.takePhotoText = @"Take Photo";
+    //	self.takeController.chooseFromPhotoRollText = @"Choose Existing";
+    //	self.takeController.chooseFromLibraryText = @"Choose Existing";
+    //	self.takeController.cancelText = @"Cancel";
+    //	self.takeController.noSourcesText = @"No Photos Available";
     
-    // NavigationBar right button settings
-    self.cameraIdentifier = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(takePhoto)];
-    self.postIdentifier = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(done)];
-    self.navigationItem.rightBarButtonItem = self.cameraIdentifier;
+    NSBundle* myBundle = [NSBundle bundleWithIdentifier:@"FDTakeTranslations"];
+    NSLog(@"%@", myBundle);
+    NSString *str = NSLocalizedStringFromTableInBundle(@"noSources",
+                                                       nil,
+                                                       [NSBundle bundleWithIdentifier:@"FDTakeTranslations"],
+                                                       @"There are no sources available to select a photo");
+    NSLog(@"%@", str);
     
-    UITabBarController *tbc = (UITabBarController*) self.parentViewController.parentViewController;
-    tbc.delegate = self;
+    self.takeController.allowsEditingPhoto = YES;
 }
 
-- (void)done {
-    NSLog(@"Done");
+- (void)takePhotoOrChooseFromLibrary
+{
+    [self.takeController takePhotoOrChooseFromLibrary];
 }
 
-- (void)presentChildController:(UIViewController*)childVC {
-    if (self.currentChildVC) {
-        [self removeCurrentChildViewController];
-    }
-    
-    [self addChildViewController:childVC];
-    
-    childVC.view.frame = [self frameForContainerController];
-    
-    [self.containerView addSubview:childVC.view];
-    self.currentChildVC = childVC;
-    
-    [childVC didMoveToParentViewController:self];
-    
+#pragma mark - FDTakeDelegate
+
+- (void)takeController:(FDTakeController *)controller didCancelAfterAttempting:(BOOL)madeAttempt {
 }
 
-- (void)removeCurrentChildViewController {
-    [self.currentChildVC willMoveToParentViewController:nil];
-    [self.currentChildVC.view removeFromSuperview];
-    [self.currentChildVC removeFromParentViewController];
-}
-
-- (CGRect)frameForContainerController {
-    CGRect containerFrame = self.containerView.bounds;
-    return containerFrame;
-}
-
-- (void)backToHome {
-    UITabBarController *tabBarController = (UITabBarController *)self.parentViewController.parentViewController;
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [tabBarController setSelectedIndex:0];
-    });
-
-}
-
-- (IBAction)changeSegControl:(UISegmentedControl *)sender {
-    if(sender.selectedSegmentIndex == 0) {
-        SearchTVController *first = [self.storyboard instantiateViewControllerWithIdentifier:@"SearchViewController"];
-        first.image = self.image;
-        [self presentChildController:first];
-        self.navigationItem.rightBarButtonItem = self.cameraIdentifier;
-    }
-     
-     if(sender.selectedSegmentIndex == 1) {
-         PostViewController *second = [self.storyboard instantiateViewControllerWithIdentifier:@"PostViewController"];
-         second.firstImage = self.image;
-         [self presentChildController:second];
-         self.navigationItem.rightBarButtonItem = self.postIdentifier;
-     }
-}
-
-#pragma mark - YCameraViewController Delegate
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    if (self.image == nil) {
-        [self takePhoto];
+- (void)takeController:(FDTakeController *)controller gotPhoto:(UIImage *)photo withInfo:(NSDictionary *)info
+{
+    [self.selectedImageView setImage:photo];
+    if (self.selectedImageView == self.muzzleImageView) {
+        self.muzzleClickLabel.hidden = YES;
+    } else {
+        self.eyesClickLabel.hidden = YES;
     }
 }
 
-//-(void)viewWillDisappear:(BOOL)animated { // change to tab delegate whenever change
-//    self.image = nil;
-//}
+#pragma mark - Touch events
 
-- (void)setImageNil {
-    self.image = nil;
-    NSLog(@"setImageNil");
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    UITouch *touch = [touches anyObject];
+    if ([touch view] == self.muzzleImageView) {
+        self.selectedImageView = self.muzzleImageView;
+        [self takePhotoOrChooseFromLibrary];
+    } else if ([touch view] == self.eyesImageView) {
+        self.selectedImageView = self.eyesImageView;
+        [self takePhotoOrChooseFromLibrary];
+    }
 }
 
-- (void)takePhoto {
-    YCameraViewController *camController = [[YCameraViewController alloc] initWithNibName:@"YCameraViewController" bundle:nil];
-    camController.delegate=self;
-    [self presentViewController:camController animated:YES completion:^{
-        // completion code
-    }];
+#pragma mark - Segue Condition
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Make sure your segue name in storyboard is the same as this line
+    if ([[segue identifier] isEqualToString:@"CameraSegue"])
+    {
+        // Get reference to the destination view controller
+        CameraSelectionViewController *vc = [segue destinationViewController];
+        
+        vc.muzzleImage = self.muzzleImageView.image;
+        vc.eyesImage = self.eyesImageView.image;
+    }
 }
 
-
-- (void)didFinishPickingImage:(UIImage *)image {
-    self.image = image;
-}
-
-- (void)yCameraControllerdidSkipped {
-    self.image = nil;
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
+    if ([identifier isEqualToString:@"CameraSegue"]) {
+        //Put your validation code here and return YES or NO as needed
+        if (self.muzzleImageView.image == nil && self.eyesImageView.image == nil) {
+            UIAlertView *alertView;
+            alertView = [[UIAlertView alloc] initWithTitle:@"" message:@"Please take photos of animal muzzle and eyes" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alertView show];
+            return NO;
+        }
+        if (self.muzzleImageView.image == nil) {
+            UIAlertView *alertView;
+            alertView = [[UIAlertView alloc] initWithTitle:@"" message:@"Please take photo of animal muzzle" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alertView show];
+            return NO;
+        }
+        if (self.eyesImageView.image == nil) {
+            UIAlertView *alertView;
+            alertView = [[UIAlertView alloc] initWithTitle:@"" message:@"Please take photo of animal eyes" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alertView show];
+            return NO;
+        }
+        
+        return YES;
+    }
     
-    [[UIApplication sharedApplication].keyWindow setRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"root"]];
-}
-
-- (void)yCameraControllerDidCancel {
+    return YES;
 }
 
 @end

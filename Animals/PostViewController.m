@@ -11,7 +11,8 @@
 
 @interface PostViewController () <PopCategoryWideDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *speciesButton;
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIImageView *muzzleImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *eyesImageView;
 @property (weak, nonatomic) IBOutlet UITextField *numberTextField;
 @property (strong, nonatomic) PopCategoryWide *popView;
 @end
@@ -21,7 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.imageView.image = self.firstImage;
+    self.muzzleImageView.image = self.muzzleImage;
+    self.eyesImageView.image = self.eyesImage;
     
     self.popView = [PopCategoryWide newPopCategoryWide];
     self.popView.delegate = self;

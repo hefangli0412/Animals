@@ -58,7 +58,7 @@
 		CD5324441AC2172C003F133A /* VBResponsiveTextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5324431AC2172C003F133A /* VBResponsiveTextFieldViewController.m */; };
 		CD5324461AC219A1003F133A /* comment.png in Resources */ = {isa = PBXBuildFile; fileRef = CD5324451AC219A1003F133A /* comment.png */; };
 		CD5324481AC26E39003F133A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5324471AC26E39003F133A /* CoreData.framework */; };
-		CD64E15D1ABDDB9100CB5973 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD64E15C1ABDDB9100CB5973 /* CameraViewController.m */; };
+		CD64E15D1ABDDB9100CB5973 /* CameraSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD64E15C1ABDDB9100CB5973 /* CameraSelectionViewController.m */; };
 		CD64E1601ABDE23D00CB5973 /* SearchTVController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD64E15F1ABDE23D00CB5973 /* SearchTVController.m */; };
 		CD64E1651ABDEE0900CB5973 /* PostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD64E1641ABDEE0900CB5973 /* PostViewController.m */; };
 		CD64E1671ABDFF2C00CB5973 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD64E1661ABDFF2C00CB5973 /* MobileCoreServices.framework */; };
@@ -68,7 +68,9 @@
 		CD65DF151ABCBB2800AC3637 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD65DF131ABCBB2800AC3637 /* LaunchScreen.xib */; };
 		CD65DF211ABCBB2800AC3637 /* AnimalsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD65DF201ABCBB2800AC3637 /* AnimalsTests.m */; };
 		CD65DF2C1ABCBFEA00AC3637 /* BrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD65DF2B1ABCBFEA00AC3637 /* BrowseViewController.m */; };
-		CDBBD7A61ACA3AD800D82B62 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDBBD7A51ACA3AD800D82B62 /* Info.plist */; };
+		CDAD99D31ACF2B8C00B9E834 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDAD99D21ACF2B8C00B9E834 /* CameraViewController.m */; };
+		CDAD99D61ACF2D8E00B9E834 /* eyeplaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = CDAD99D41ACF2D8E00B9E834 /* eyeplaceholder.png */; };
+		CDAD99D91ACF65AE00B9E834 /* muzzleplaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = CDAD99D81ACF65AE00B9E834 /* muzzleplaceholder.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,8 +148,8 @@
 		CD5324431AC2172C003F133A /* VBResponsiveTextFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VBResponsiveTextFieldViewController.m; path = VBResponsiveTextFieldViewController/VBResponsiveTextFieldViewController.m; sourceTree = "<group>"; };
 		CD5324451AC219A1003F133A /* comment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = comment.png; path = Images/comment.png; sourceTree = "<group>"; };
 		CD5324471AC26E39003F133A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		CD64E15B1ABDDB9100CB5973 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
-		CD64E15C1ABDDB9100CB5973 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		CD64E15B1ABDDB9100CB5973 /* CameraSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraSelectionViewController.h; sourceTree = "<group>"; };
+		CD64E15C1ABDDB9100CB5973 /* CameraSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraSelectionViewController.m; sourceTree = "<group>"; };
 		CD64E15E1ABDE23D00CB5973 /* SearchTVController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTVController.h; sourceTree = "<group>"; };
 		CD64E15F1ABDE23D00CB5973 /* SearchTVController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTVController.m; sourceTree = "<group>"; };
 		CD64E1631ABDEE0900CB5973 /* PostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostViewController.h; sourceTree = "<group>"; };
@@ -164,6 +166,10 @@
 		CD65DF201ABCBB2800AC3637 /* AnimalsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimalsTests.m; sourceTree = "<group>"; };
 		CD65DF2A1ABCBFEA00AC3637 /* BrowseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowseViewController.h; sourceTree = "<group>"; };
 		CD65DF2B1ABCBFEA00AC3637 /* BrowseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowseViewController.m; sourceTree = "<group>"; };
+		CDAD99D11ACF2B8C00B9E834 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		CDAD99D21ACF2B8C00B9E834 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		CDAD99D41ACF2D8E00B9E834 /* eyeplaceholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = eyeplaceholder.png; path = Images/eyeplaceholder.png; sourceTree = "<group>"; };
+		CDAD99D81ACF65AE00B9E834 /* muzzleplaceholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = muzzleplaceholder.png; sourceTree = "<group>"; };
 		CDBBD7A51ACA3AD800D82B62 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -259,6 +265,8 @@
 		CD64E13D1ABCCD4D00CB5973 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CDAD99D81ACF65AE00B9E834 /* muzzleplaceholder.png */,
+				CDAD99D41ACF2D8E00B9E834 /* eyeplaceholder.png */,
 				CD5324451AC219A1003F133A /* comment.png */,
 				CD53240F1AC21514003F133A /* dog02.jpeg */,
 				CD5324101AC21514003F133A /* dog04.jpg */,
@@ -317,8 +325,10 @@
 				CD65DF2B1ABCBFEA00AC3637 /* BrowseViewController.m */,
 				CD64E1B71ABF0F0900CB5973 /* DetailViewController.h */,
 				CD64E1B81ABF0F0900CB5973 /* DetailViewController.m */,
-				CD64E15B1ABDDB9100CB5973 /* CameraViewController.h */,
-				CD64E15C1ABDDB9100CB5973 /* CameraViewController.m */,
+				CDAD99D11ACF2B8C00B9E834 /* CameraViewController.h */,
+				CDAD99D21ACF2B8C00B9E834 /* CameraViewController.m */,
+				CD64E15B1ABDDB9100CB5973 /* CameraSelectionViewController.h */,
+				CD64E15C1ABDDB9100CB5973 /* CameraSelectionViewController.m */,
 				CD64E15E1ABDE23D00CB5973 /* SearchTVController.h */,
 				CD64E15F1ABDE23D00CB5973 /* SearchTVController.m */,
 				CD64E1631ABDEE0900CB5973 /* PostViewController.h */,
@@ -477,6 +487,7 @@
 				CD341F041ABFC27900665172 /* flash-auto@2x.png in Resources */,
 				CD53241D1AC21514003F133A /* icon_circle.png in Resources */,
 				CD341F131ABFC27900665172 /* micro_carbon.png in Resources */,
+				CDAD99D61ACF2D8E00B9E834 /* eyeplaceholder.png in Resources */,
 				CD5324191AC21514003F133A /* dog02.jpeg in Resources */,
 				CD341F0F1ABFC27900665172 /* grid.png in Resources */,
 				CD65DF101ABCBB2800AC3637 /* Main.storyboard in Resources */,
@@ -485,8 +496,8 @@
 				CD341F161ABFC27900665172 /* take-snap@2x.png in Resources */,
 				CD65DF151ABCBB2800AC3637 /* LaunchScreen.xib in Resources */,
 				CD53241F1AC21514003F133A /* like.png in Resources */,
+				CDAD99D91ACF65AE00B9E834 /* muzzleplaceholder.png in Resources */,
 				CD5324211AC21514003F133A /* more.png in Resources */,
-				CDBBD7A61ACA3AD800D82B62 /* Info.plist in Resources */,
 				CD5324411AC216C3003F133A /* UnlockedTableViewCell.xib in Resources */,
 				CD341F111ABFC27900665172 /* library.png in Resources */,
 				CD53241E1AC21514003F133A /* icon.png in Resources */,
@@ -567,7 +578,7 @@
 				CD64E1601ABDE23D00CB5973 /* SearchTVController.m in Sources */,
 				CD53242D1AC215CD003F133A /* PopCategory.m in Sources */,
 				CD341F171ABFC27900665172 /* YCameraViewController.m in Sources */,
-				CD64E15D1ABDDB9100CB5973 /* CameraViewController.m in Sources */,
+				CD64E15D1ABDDB9100CB5973 /* CameraSelectionViewController.m in Sources */,
 				CD5324351AC21662003F133A /* AppDelegate.m in Sources */,
 				CD46E6CA1ACF165F002065B2 /* UserViewController.m in Sources */,
 				CD64E1651ABDEE0900CB5973 /* PostViewController.m in Sources */,
@@ -578,6 +589,7 @@
 				CD5324371AC21662003F133A /* main.m in Sources */,
 				CD64E1B91ABF0F0900CB5973 /* DetailViewController.m in Sources */,
 				CD5324401AC216C3003F133A /* UnlockedTableViewCell.m in Sources */,
+				CDAD99D31ACF2B8C00B9E834 /* CameraViewController.m in Sources */,
 				CD2FA9CA1ABFD53C008E575F /* TabBarController.m in Sources */,
 				CD5324441AC2172C003F133A /* VBResponsiveTextFieldViewController.m in Sources */,
 			);

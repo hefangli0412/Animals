@@ -1,5 +1,5 @@
 //
-//  PostViewController.h
+//  CameraViewController.h
 //  Animals
 //
 //  Created by Hefang Li on 3/21/15.
@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "VBResponsiveTextFieldViewController.h"
 
-@interface PostViewController : VBResponsiveTextFieldViewController
+@interface CameraSelectionViewController : UIViewController
 @property (strong, nonatomic) UIImage *muzzleImage;
 @property (strong, nonatomic) UIImage *eyesImage;
 @end

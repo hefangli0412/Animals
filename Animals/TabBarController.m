@@ -7,7 +7,7 @@
 //
 
 #import "TabBarController.h"
-#import "CameraViewController.h"
+#import "CameraSelectionViewController.h"
 @interface TabBarController ()
 
 @end
@@ -16,8 +16,8 @@
 
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
     if (item != tabBar.items[1]) {
-        CameraViewController *cvc = (CameraViewController*) self.delegate;
-        [cvc setImageNil];
+        CameraSelectionViewController *cvc = (CameraSelectionViewController*) self.delegate;
+//        [cvc setImageNil];
     }
 }
 
