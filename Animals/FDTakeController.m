@@ -186,16 +186,16 @@ static NSString * const kStringsTableName = @"FDTake";
         }
         
 //        // Changed here by Hefang
-////        CGFloat toolbarHeight = self.imagePicker.toolbar.frame.size.height;
-//        CGFloat toolbarHeight = self.imagePicker.navigationBar.bounds.size.height;
-//        CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
-//        // at current screenwidth, 'previewHeight' is the height necessary to maintain the aspect ratio
-//        CGFloat previewHeight = screenWidth + (screenWidth / 3);
-//        CGRect squareFrame = CGRectMake(0, toolbarHeight + (previewHeight - screenWidth)/2, screenWidth, screenWidth);
-//        SquareView *squareView=[[SquareView alloc]initWithFrame:squareFrame];
-//        self.imagePicker.cameraOverlayView = squareView;
-//        
-//        _imagePicker.allowsEditing = NO;
+//        CGFloat toolbarHeight = self.imagePicker.toolbar.frame.size.height;
+        CGFloat toolbarHeight = self.imagePicker.navigationBar.bounds.size.height;
+        CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+        // at current screenwidth, 'previewHeight' is the height necessary to maintain the aspect ratio
+        CGFloat previewHeight = screenWidth + (screenWidth / 3);
+        CGRect squareFrame = CGRectMake(0, toolbarHeight + (previewHeight - screenWidth)/2, screenWidth, screenWidth);
+        SquareView *squareView=[[SquareView alloc]initWithFrame:squareFrame];
+        self.imagePicker.cameraOverlayView = squareView;
+        
+        _imagePicker.allowsEditing = NO;
 
         // On iPad use pop-overs.
         if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
