@@ -47,6 +47,10 @@ static NSString * const lockedTVCellIdentifier = @"LockedTVCell";
     [self.navigationController.navigationBar setTitleTextAttributes:newAttributes];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    self.popView.hidden = YES;
+}
+
 #pragma mark - Dropdown menu
 
 - (IBAction)dropdownMenuPressed:(UIButton *)sender {
