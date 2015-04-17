@@ -29,7 +29,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+        
     self.loginButton.delegate = self;
     self.loginButton.readPermissions = @[@"public_profile", @"email", @"user_friends"];
     [FBSDKProfile enableUpdatesOnAccessTokenChange:YES];
@@ -73,7 +73,6 @@
     self.lblEmail.hidden = shouldHide;
     self.profilePicture.hidden = shouldHide;
 }
-
 
 #pragma mark - FBLoginView Delegate method implementation
 

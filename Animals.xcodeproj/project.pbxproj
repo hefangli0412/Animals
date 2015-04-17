@@ -483,7 +483,7 @@
 				TargetAttributes = {
 					CD65DF001ABCBB2800AC3637 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = AV8W86EGKD;
+						DevelopmentTeam = K2Z953X8R5;
 					};
 					CD65DF191ABCBB2800AC3637 = {
 						CreatedOnToolsVersion = 6.2;

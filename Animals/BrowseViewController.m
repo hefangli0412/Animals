@@ -45,6 +45,9 @@ static NSString * const lockedTVCellIdentifier = @"LockedTVCell";
     [newAttributes setObject:[UIFont fontWithName:@"Chalkboard SE" size:22] forKey:UITextAttributeFont];
     [newAttributes setObject:[UIColor colorWithRed:120.0/255.0 green:120.0/255.0 blue:120.0/255.0 alpha:1.0] forKey:UITextAttributeTextColor];
     [self.navigationController.navigationBar setTitleTextAttributes:newAttributes];
+    
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 400;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -91,23 +94,15 @@ static NSString * const lockedTVCellIdentifier = @"LockedTVCell";
 
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-
-    if (indexPath.row == 0) {
-//        return 463;
-        return 400;
-    } else {
-        return 400;
-    }
-    
-}
-
 //- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-////    [self configureCell:self.prototypeCell forRowAtIndexPath:indexPath];
-//    [self.unlockedPrototypeCell layoutIfNeeded];
+//
+//    if (indexPath.row == 0) {
+////        return 463;
+//        return 400;
+//    } else {
+//        return 400;
+//    }
 //    
-//    CGSize size = [self.unlockedPrototypeCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
-//    return size.height+1;
 //}
 
 - (UnlockedTableViewCell *)unlockedPrototypeCell
